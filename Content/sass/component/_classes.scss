@@ -2,8 +2,7 @@
 
 // extend
 // ------------------------------------------------------------
-%clearfix,
-.clearfix {
+%clearfix, .clearfix {
     &::before,
     &::after {
         content: " ";
@@ -45,13 +44,11 @@
 .text-right, %text-right   { text-align: right; }
 .text-center, %text-center { text-align: center; }
 
-%list-unstyled,
-.list-unstyled {
+%list-unstyled, .list-unstyled {
     list-style: none;
 }
 
-%list-inline,
-.list-inline {
+%list-inline, .list-inline {
     @extend %list-unstyled;
 
     margin-left: -5px;
