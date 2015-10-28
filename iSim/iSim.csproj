@@ -181,6 +181,7 @@
     <Content Include="Content\js\swiper\swiper.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="GACode.html" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
     <Content Include="mail.html" />
