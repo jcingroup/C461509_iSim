@@ -8,9 +8,9 @@ namespace iSim.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        public RedirectResult Index()
         {
-            return View();
+            return Redirect("index.html");
         }
     }
 }
