@@ -4,7 +4,6 @@ $wrapper-bg:            #fff;
 $content-spacing:       75px !default;
 
 // header
-$header-bg:             url(#{$img-path}/bgHeader.png) center 0 repeat-x;
 $header-height:         112px;
 
 $menu-height:           70px;
@@ -14,7 +13,8 @@ $menu-link-hover:       $brand-secondary;
 
 // footer
 $footer-height:         50px !default;
-$footer-bg:             #113a4d;
+$footer-height-sm:      100px;
+$footer-bg:             #656565;
 $goTop:                 (bottom 10px), (right 15px) !default;
 
 
@@ -35,133 +35,101 @@ $goTop:                 (bottom 10px), (right 15px) !default;
     @extend %clearfix;
 
     // 最小寬度限制 (無 RWD - 至少 lg 的寬度)
-    min-width: wrap-width(lg); 
+    min-width: wrap-width(lg);
 
     // 最小寬度限制 (有 RWD - 至少 xxs 的寬度)
-    @include media(xs) {
-        min-width: wrap-width(xxs);
+    @include media(md) {
+        min-width: auto;
     }
 }
 
 #wrapper {
     @extend %container;
+    @extend %center;
     @if $lte7 {
         _height: 100%;
     }
     min-height: 100%;
     padding-bottom: $footer-height + $content-spacing; // 內容與footer間距
     background: $wrapper-bg;
+
+    @include media(sm) {
+        padding-bottom: $footer-height-sm + $content-spacing;
+    }
 }
 
 .wrap {
     @extend %container;
     @extend %center;
-    @extend .text-left;
     @extend %clearfix;
+    // @extend .text-left;
 }
 
-#header, #main, #footer {
+#header, #footer, section {
     @extend %container;
     @extend %contain;
-
-    @include media(lg) {
-        padding-left: ($gutter)-5px;
-        padding-right: ($gutter)-5px;
-    }
-
-    @include media(lg-min) {
-        padding-left: $gutter+5 ;
-        padding-right: $gutter+5 ;
-    }
-}
-
-#main {
-    @extend .text-left;
-
-    z-index: z(main);
 }
 
 
 // header
 // ----------------------------------------------------------------------
 #header {
-    height: $header-height;
     z-index: z(header);
-
-    &::before {
-        content:" ";
-        display: block;
-
-        background: $brand-primary;
-        
-        @include size (100%, $menu-height);
-        @include absolute(top 158px left 0);
-    }
-
-    @include media(sm) {
-        height: 149px;
-        border-bottom: 5px solid $brand-primary;
-
-        &::before {display: none;}
-    }
 
     h1 {
         cursor: pointer; cursor: hand; // for ie
         z-index: z(logo);
 
-        @include text-pic('logo.png', 340px, 135px);
-        @include absolute(left 0 top 0);
+        @include text-pic('logo.png', 235px, 83px);
+        @include absolute(left cp(70px) top 28px);
 
-        @include media(sm) {
-            width: 300px;
-            height: 117px;
-            background-size:100%;
-
-            position: static;
-            margin:15px auto;
-        }        
+        @include media(xs) {
+            top: 15px; left: 10px;
+            background-size: contain;
+            @include size(150px,70px);
+        }
     }
-}
-
-.logo, #menu, .award {
-    position: absolute;
 }
 
 .top-nav {
+    font-size: em(28px);
+    text-align: right;
     z-index: z(logo)-1;
 
-    @include absolute(right 0 top 16px);
-
-    li {
-        background:url(#{$img-path}/iconAward.png) no-repeat;
-        height:40px;
-
-        font-size: em(13px);
-        color: #789bb3;
-
-        margin-right:30px;
-        padding:4px 0 0 45px;
-
-        @for $i from 1 through 2 {
-            $icon-y: 0px -100px;
-            &:nth-child(#{$i}) {
-                background-position: 0 nth($icon-y, $i);
-            }
-        }
+    @include absolute(right 20px top 38px);
+    @include media(xs) {
+        font-size: em(16px);
+        right: 10px; top: 12px;
     }
 
-    @include media(sm) {
-        top:10px;
-        margin-top: -1em; // fix for hidden text
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: 8px;
 
-        li {
-            @include text-hide;
+        color: #fff;
+        line-height: 34px;
 
-            width:40px;
-            margin-right:10px;
-            padding:0;
-            &:last-child {margin-right:0;}
+        &.club {
+            background-attachment: fixed;
+            @include text-pic('icon_club.png', 35px, 35px);
         }
+        &:last-of-type {
+            background-position: -92px 0;
+        }
+        // @for $i from 3 through 4 {
+        //     $icon-x: 0 0 -45px -92px;
+        //     &:nth-child(#{$i}) {
+        //         background-position: nth($icon-x, $i) 0;
+        //     }
+        // }
+    }
+    span {
+        display: block;
+        clear: both;
+        color: #fff;
+        font-size: em(20px,28px);
+        margin-top: 8px;
     }
 }
 
@@ -169,44 +137,92 @@ $goTop:                 (bottom 10px), (right 15px) !default;
 // footer
 // ----------------------------------------------------------------------
 #footer {
+    @extend %center;
     background: $footer-bg;
     margin-top: -($footer-height);
     height: $footer-height;
     z-index: z(footer);
+
+    color: #fff;
+    padding: $gutter;
+
+    @include media(sm) {
+        margin-top: -($footer-height-sm);
+        height: $footer-height-sm;
+    }
+}
+
+.explain {
+    float: right;
+
+    @include media(sm) {
+        float: none;
+        text-align: center;
+        padding-top: 10px;
+    }
+
+    a {
+        color: #fff;
+        font-size: em(17px);
+    }
 }
 
 .copyright {
-    color: $brand-secondary;
-    font-size: em(12px);
-
-    @include absolute(left 0 top 235px);
+    float: left;
+    font-size: em(17px);
+    text-align: left;
 }
 
+.bottom {
+    @include fixed(bottom 180px right -17px);
+    width: 130px;
+    padding: 12px 17px 20px 3px;
+    background: #fff;
+    border-radius: 15px 0 0 15px;
+    box-shadow: -15px 15px 0 rgba(#CBC9C8, 0.5);
+    z-index: z(goTop)+1;
+    a {
+        display: block;
+        font-size: em(31px);
+
+        &:first-child {
+            @include circle(92px);
+            background: $info;
+            color: #F5F199;
+
+            &:hover, &:active { background: $brand-secondary; }
+        }
+        &:last-child {
+            border-top: 1px solid #878787;
+            line-height: 1.1;
+            padding-top: 12px;
+            margin: 12px 10px 0 10px;
+        }
+    }
+}
 .goTop {
-    @include circle(60px, true, block);
+    @include fixed(bottom 55px right 10px);
+    @include circle(100px);
+
+    background: rgba(#fff,0.6);
+    border: 2px solid $info;
+    color: $info;
+    font-size: em(40px);
+    line-height: 1.1;
+    padding-top: 37px;
+
     display: none;
-    opacity: .8;
-    background:$brand-primary;
-
-    color:#fff;
-
     z-index: z(goTop);
-    position: fixed;
 
-    transition: none;
-
-    @each $attr, $value in $goTop {
-        #{$attr}: $value;
+    &::before {
+        @include caret(up, 20px, 22px, $info);
+        @include absolute(top 0 left 50%);
+        content: '';
+        margin-left: -10px;
     }
-
-    &:hover {
+    &:hover, &:active {
         opacity: 1;
-        color:#fff;
-    }
-
-    @include media(xs) {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
+        background: #fff;
+        color: darken($link-color,10%);
     }
 }

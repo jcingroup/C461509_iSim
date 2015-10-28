@@ -117,7 +117,7 @@ input:not([type]), #{text-inputs(all)} {
     @extend .form-element;
 }
 #{text-inputs(input)} {
-    height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
+    height: $input-height-large; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
 }
 
 // iOS 的時間欄位垂直對齊 - safari

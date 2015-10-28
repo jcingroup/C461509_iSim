@@ -56,19 +56,12 @@ img {
 
 @font-face {
     font-family: MElleHK;
-    src: local('蒙纳繁雅丽'),
-         local('MElleHK-Medium'),
-         url(#{$font-path}MElleHK.woff) format('woff'),
-         url(#{$font-path}MElleHK.otf) format('opentype'),
-         url(#{$font-path}MElleHK.ttf) format('opentype');
+    src: url(#{$font-path}/MElleHK.otf) format('opentype');
 }
 
 @font-face {
     font-family: NeutrafaceDemi;
-    src: local('Neutraface2Text-Demi'),
-         url(#{$font-path}Neutraface2Text-Demi.woff) format('woff'),
-         url(#{$font-path}Neutraface2Text-Demi.otf) format('opentype'),
-         url(#{$font-path}Neutraface2Text-Demi.ttf) format('opentype');
+    src: url(#{$font-path}/NeutrafaceDemi.otf) format('opentype');
 }
 
 // Headings
@@ -76,16 +69,16 @@ img {
 h2, h3, h4, h5, h6 {
     font-weight: $heading-font-weight;
     line-height: $heading-line-height;
-    color: $heading-color;
+    // color: $heading-color;
 
     small {
         font-weight: normal;
         line-height: 1;
-        color: $heading-small-color;
+        // color: $heading-small-color;
     }
 }
 h2, h3 {
-    margin-top: em($line-height-computed);
+    // margin-top: em($line-height-computed);
     margin-bottom: em($line-height-computed / 2);
 
     small {
@@ -93,7 +86,7 @@ h2, h3 {
     }
 }
 h4, h5, h6 {
-    margin-top: em($line-height-computed / 2);
+    // margin-top: em($line-height-computed / 2);
     margin-bottom: em($line-height-computed / 2);
 
     small {

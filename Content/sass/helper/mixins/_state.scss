@@ -30,7 +30,9 @@
         border-color: lighten(adjust-hue($color, -10), 20%);
     }
     @if $types == "btn" {
-        background: $color;
-        border-color: darken($color, 5%);
+        // background: $color;
+        // border-color: darken($color, 5%);
+        color: $color;
+        border-color: $color;
     }
 }

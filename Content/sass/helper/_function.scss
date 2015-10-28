@@ -14,7 +14,7 @@
 }
 
 // 算寬度百分比
-@function cp($target, $container: wrap-width(lg)) {
+@function cp($target, $container: wrap-width(xl)) {
     @return ceil(($target / $container) * 100%);
 }
 

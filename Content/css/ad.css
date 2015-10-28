@@ -1067,6 +1067,8 @@ form .row {
     font: 0/0 a;
     text-indent: -9999px;
     background: url(../images/aa/title.gif) 0 0 no-repeat; }
+  #banner .t2 {
+    background-position: 0 -151px; }
   #banner p {
     font-size: 1.3125em;
     color: #fff;
@@ -1078,9 +1080,27 @@ form em {
   color: #F8124C; }
 
 button {
-  background: none; }
+  background: none;
+  float: right;
+  margin-top: 20px;
+  width: 250px; }
 
-main header {
-  font-size: 62px;
-  font-family: MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
-  line-height: 99px; }
+main {
+  padding: 40px 0; }
+  main header {
+    background: url(../images/aa/titleBg.gif) 0 center no-repeat;
+    color: #fff;
+    font-size: 3.4375em;
+    font-family: MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
+    line-height: 99px;
+    text-align: left;
+    margin-bottom: 30px;
+    padding-left: 3%; }
+
+ul {
+  font-size: 1.3125em;
+  font-weight: bold; }
+  ul li {
+    margin: 10px 0; }
+  ul a {
+    color: #5C5C5C; }

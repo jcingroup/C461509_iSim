@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+$img-path2:             '../images/aa';
 $text-color:            #5C5C5C;
 
 // import
@@ -30,7 +31,7 @@ $text-color:            #5C5C5C;
 	@include size(179px,75px);
 }
 #banner {
-	background: #2B5114 url(#{$img-path}/aa/banner.png) 10% bottom no-repeat;
+	background: #2B5114 url(#{$img-path2}/banner.png) 10% bottom no-repeat;
 	height: 785px;
 	position: relative;
 	h2, p {
@@ -42,6 +43,7 @@ $text-color:            #5C5C5C;
 		background-attachment: fixed;
 		@include text-pic('aa/title.gif',333px,76px);
 	}
+	.t2 { background-position: 0 -151px;}
 	p {
 		font-size: em(21px);
 		color: #fff;
@@ -53,12 +55,31 @@ form {
     label { font-size: em(21px); }
     em { color: #F8124C }
 }
-button { background: none; }
+button {
+	background: none;
+	float: right;
+	margin-top: 20px;
+	width: 250px;
+}
 
 main {
+	padding: 40px 0;
 	header {
-		font-size: 62px;
+		background: url(#{$img-path2}/titleBg.gif) 0 center no-repeat;
+
+		color: #fff;
+		font-size: em(55px);
 		font-family: $font-sp;
 		line-height: 99px;
+		text-align: left;
+
+		margin-bottom: 30px;
+		padding-left: cp(40px);
 	}
+}
+ul {
+	font-size: em(21px);
+	font-weight: bold;
+	li { margin: 10px 0; }
+	a { color: $text-color; }
 }

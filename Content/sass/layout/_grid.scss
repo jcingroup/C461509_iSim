@@ -7,15 +7,17 @@
 // $one_col: (100% - ($gutter * $cols)) / $cols;
 $one_col: 100% / $cols;
 
-// @mixin cols($num) {
-//     width: ($one_col * $num) + ($gutter-per * ($num - 1));
-// }
 @mixin cols($num) {
+    // width: ($one_col * $num) + ($gutter-per * ($num - 1));
     width: ($one_col * $num);
-    float: left;
-    padding-left: $gutter/2;
-    padding-right: $gutter/2;
 }
+// @mixin cols($num) {
+//     width: ($one_col * $num);
+//     // float: left;
+//     display: inline-block;
+//     padding-left: $gutter/2;
+//     padding-right: $gutter/2;
+// }
 
 @mixin make-cols($class: md) {
     @for $i from 1 through $cols {
@@ -29,17 +31,17 @@ $one_col: 100% / $cols;
 }
 
 // 偏移
-@mixin cols-offset($num) {
+@mixin offset($num) {
     margin-left: ($one_col * $num);
 }
 
-@mixin make-cols-offset($class: md) {
+@mixin make-offset($class: md) {
     @for $i from 0 through $cols {
         @if($class == md) {
-            .col-offset-#{$i} { @include cols-offset($i); }
+            .offset-#{$i} { @include offset($i); }
         }
         @else {
-            .col-#{$class}-offset-#{$i} { @include cols-offset($i); }
+            .offset-#{$class}-#{$i} { @include offset($i); }
         }
     }
 }
@@ -51,23 +53,21 @@ $one_col: 100% / $cols;
     @extend %clearfix;
     // @extend %center;
 
-    margin-left:-$gutter/2;
-    margin-right:-$gutter/2;
+    // margin-left:-$gutter/2;
+    // margin-right:-$gutter/2;
 
     form & {
         margin-bottom: $gutter;
     }
 }
 
-// [class*="col-"] {
-//     float: left;
+[class^="col-"] {
+    @extend .float-l;
+    @extend .text-left;
 
-//     margin-left: $gutter;
-
-//     &:first-child, .row &:first-child {
-//         margin-left: 0;
-//     }
-// }
+    padding-left: $gutter;
+    &:first-child, .row &:first-child { padding-left: 0; }
+}
 
 @include make-cols(md); // 預設: md
 @include media(xl)     { @include make-cols(xl); }
@@ -75,8 +75,8 @@ $one_col: 100% / $cols;
 @include media(sm)     { @include make-cols(sm); }
 @include media(xs)     { @include make-cols(xs); }
 
-@include make-cols-offset(md); // 預設: md
-@include media(xl)     { @include make-cols-offset(xl); }
-@include media(lg-min) { @include make-cols-offset(lg); }
-@include media(sm)     { @include make-cols-offset(sm); }
-@include media(xs)     { @include make-cols-offset(xs); }
+@include make-offset(md); // 預設: md
+@include media(xl)     { @include make-offset(xl); }
+@include media(lg-min) { @include make-offset(lg); }
+@include media(sm)     { @include make-offset(sm); }
+@include media(xs)     { @include make-offset(xs); }
