@@ -10,6 +10,40 @@
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <!--[if lt IE 9]><script src="//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
     <link href="Content/css/ad.css" rel="stylesheet">
+    <script src="Scripts/w_comminc.js"></script>
+    <script>
+        $("document").ready(function () {
+            $("#adInfo").submit(function (event) {
+                event.preventDefault();
+                var company_name = $("#m_company_name").val();
+                var contact_person = $("#m_contact_person").val();
+                var tel = $("#m_tel").val();
+                var email = $("#m_email").val();
+                var theme = $("#m_theme").val();
+                var content = $("#m_content").val();
+
+                var data = {
+                    "email_type":2,
+                    "company_name": company_name,
+                    "contact_person": contact_person,
+                    "tel": tel,
+                    "email": email,
+                    "theme": theme,
+                    "content": content
+                };
+                jqPost('http://'+location.host + '/Home/sendMail', data).done(function (data, textStatus, jqXHRdata) {
+                    if (!data.result) {
+                        alert(data.message);
+                    }
+                    else {
+                        alert('申請已送出，我們會儘快與您聯絡!');
+                    }
+                }).fail(function (jqXHR, textStatus, errorThrown) {
+                    showAjaxError(errorThrown);
+                });
+            });
+        }); //Begin of Jquery Statement
+    </script>
 </head>
 
 <body class="ad2">
@@ -34,32 +68,32 @@
                 <li>請立即與我們聯絡！</li>
             </ul>
 
-            <form class="col-6 col-sm-12">
+            <form class="col-6 col-sm-12" id="adInfo">
                 <p>
                     <label>公司名稱<em>*</em></label>
-                    <input type="text">
+                    <input type="text" id="m_company_name" required>
                 </p>
                 <p>
                     <label>聯絡人姓名<em>*</em></label>
-                    <input type="text">
+                    <input type="text" id="m_contact_person" required>
                 </p>
                 <p>
                     <label>電子郵件<em>*</em></label>
-                    <input type="text">
+                    <input type="email" id="m_email" required>
                 </p>
                 <p>
                     <label>電話號碼<em>*</em></label>
-                    <input type="text">
+                    <input type="text" id="m_tel" required>
                 </p>
                 <p>
                     <label>宣傳主題</label>
-                    <input type="text">
+                    <input type="text" id="m_theme">
                 </p>
                 <p>
                     <label>廣告內容</label>
-                    <input type="text">
+                    <input type="text" id="m_content">
                 </p>
-                <button class="btn btn-green">送出</button>
+                <button class="btn btn-green" type="submit">送出</button>
             </form>
         </div>
     </main>
