@@ -6,18 +6,6 @@ $(window).scroll(function () {
         $('.goTop').fadeOut(500);
     }
 });
-// $('.goTop').click(function (event) {
-//     $('html, body').animate({
-//         scrollTop: $($.attr(this, 'href')).offset().top
-//     }, 1000);
-//     event.preventDefault();
-// });
-
-// // 點選後移到最頂端
-// $('.goTop').click(function(){
-//     $("html, body").animate({ scrollTop: 0 }, 600);
-//     return false;
-// });
 
 // 點選後跳到 href 指向的位置
 $('.scroll-y, .goTop').click(function () {
@@ -29,16 +17,16 @@ $('.scroll-y, .goTop').click(function () {
 
 
 // 行動裝置的主選單
-$(".menu-trigger").click(function (event){
-    $("body").toggleClass("toggled");
-    event.preventDefault();
-});
+// $(".menu-trigger").click(function (event){
+//     $("body").toggleClass("toggled");
+//     event.preventDefault();
+// });
 
-// 行動裝置的產品左選單
-$(".submenu-trigger .btn").click(function (event){
-    $("#sidebar").slideToggle();
-    event.preventDefault();
-});
+// // 行動裝置的產品左選單
+// $(".submenu-trigger .btn").click(function (event){
+//     $("#sidebar").slideToggle();
+//     event.preventDefault();
+// });
 
 // include
 $.get("_include/header.html",function(data) {
