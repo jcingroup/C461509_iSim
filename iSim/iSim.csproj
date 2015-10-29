@@ -226,6 +226,7 @@
     <Content Include="Content\font\MElleHK.woff" />
     <Content Include="Content\font\Neutraface2Text-Demi.otf" />
     <Content Include="Content\font\NeutrafaceDemi.otf" />
+    <Content Include="Scripts\w_comminc.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -251,6 +252,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
+    <Content Include="Views\Home\Email.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
