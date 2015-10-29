@@ -1,1 +1,4 @@
 *.db
+iSim/bin/iSim.dll
+iSim/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+iSim/obj/Debug/iSim.pdb
