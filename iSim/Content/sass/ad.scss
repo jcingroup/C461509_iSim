@@ -31,23 +31,32 @@ $text-color:            #5C5C5C;
 	@include size(179px,75px);
 }
 #banner {
-	background: #2B5114 url(#{$img-path2}/banner.png) 10% bottom no-repeat;
-	height: 785px;
+	background: #2B5114;
 	position: relative;
+	padding-bottom: 76px;
+
 	h2, p {
-		@include absolute(left 50% top 33%);
-		margin-left: 150px;
+		@include absolute(top 260px);
 	}
 	h2 {
+		right: cp(130px);
 		margin-top: -100px;
 		background-attachment: fixed;
 		@include text-pic('aa/title.gif',333px,76px);
 	}
 	.t2 { background-position: 0 -151px;}
 	p {
+		right: cp(20px);
 		font-size: em(21px);
 		color: #fff;
 		text-align: left;
+	}
+	img {
+		position: relative;
+		top: 76px; left: -7%;
+		@include media(lg) {
+			width: 80%;
+		}
 	}
 }
 

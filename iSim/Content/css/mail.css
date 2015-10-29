@@ -332,7 +332,7 @@ caption {
   word-wrap: break-word;
   word-break: break-all; }
 
-#header::after, #footer::after, section::after, .wrap::after, .clearfix::after {
+#header::after, #footer::after, #main::after, section::after, .wrap::after, .clearfix::after {
   content: '';
   display: table;
   clear: both; }
@@ -389,17 +389,17 @@ caption {
 
 /*      layout
 -----------------------------------------------------------------------*/
-#wrapper, .wrap, #header, #footer, section {
+#wrapper, .wrap, #header, #footer, #main, section {
   position: relative; }
 
 #wrapper, .wrap, #footer {
   max-width: 1440px;
   margin: 0 auto; }
 
-#header, #footer, section {
+#header, #footer, #main, section {
   min-width: 1008px; }
   @media (max-width: 991px) {
-    #header, #footer, section {
+    #header, #footer, #main, section {
       min-width: auto; } }
 
 #wrapper {
