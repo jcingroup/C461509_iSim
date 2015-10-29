@@ -216,7 +216,7 @@ section {
         }
         &.p1 {
             padding-top: 100px;
-            padding-bottom: 40px;
+            padding-bottom: 60px;
             &::before {
                 background-image: url(#{$img-path2}/productBg3.gif);
                 top: -15px; height: 101px;
@@ -225,6 +225,7 @@ section {
             @include media(sm) { padding-bottom: 0; }
 
             img {
+                vertical-align: middle;
                 margin-left: cp(20px);
                 @include media(xl) { margin-left: cp(160px); }
                 @include media(sm) { margin: auto; margin-top: 15px; }
@@ -304,8 +305,6 @@ section {
         color: $brand-primary;
         font-size: em(32px);
         font-family: $font-sp;
-        line-height: 1.8;
-        margin-top: 10px;
         margin-bottom: 5px;
     }
     p {
@@ -313,7 +312,7 @@ section {
         font-size: em(23px);
         font-weight: bold;
         line-height: 1.2;
-        margin-top: -48px;
+        margin-top: -35px;
         @extend %text-middle;
     }
     a {
@@ -338,8 +337,9 @@ section {
         &:first-child {
             h3 {
                 background: url(#{$img-path2}/icon_title2.gif) right 0 no-repeat;
-                padding-right: 35px;
-                margin-right: 13px;
+                padding-right: 10px;
+                margin-right: 30px;
+                margin-top: -20px;
             }
         }
     }
@@ -371,14 +371,17 @@ section {
         @include size(512px,482px);
 
         @include media(sm) { display: none; }
-        @include media(md) {
+        @include media(md2) {
             background-size: contain;
             left: 10px;
             @include size(400px,378px);
             // @include prefix(transform,scale(0.8));
         }
     }
-    div { position: relative; z-index: 5; }
+    div {
+        position: relative; z-index: 5;
+        @include media($md-pc) { margin-left: 41%; }
+    }
     header { color: #085E80; }
     p {
         color: #3E3E3E;
@@ -434,21 +437,24 @@ section {
 #faq {
     background: url(#{$img-path2}/faqBg.gif) 0 0 repeat;
     padding-top: 30px;
+    header, dt, dd { text-align: left; }
     header {
         color: #E43C16;
-        text-align: left;
         margin-bottom: 30px;
     }
+    // div { float: left; }
     dl {
         color: #656565;
         font-size: em(22px);
         font-weight: bold;
     }
-    dt, dd { line-height: 1.5; }
-    dt { color: #221714; }
-    dd {
+    dt, dd {
+        line-height: 1.5;
         text-indent: -27px;
         margin-left: 27px;
+    }
+    dt { color: #221714; }
+    dd {
         margin-bottom: 30px;
         a {
             color: #5B9EE6;

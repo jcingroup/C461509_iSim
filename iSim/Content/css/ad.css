@@ -410,7 +410,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 .half {
   width: 46.9%; }
 
-.float-l, [class^="col-"] {
+.float-l {
   float: left; }
 
 .float-r {
@@ -434,7 +434,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 .circle, .bottom a:first-child, .goTop {
   border-radius: 50%; }
 
-.text-left, [class^="col-"] {
+.text-left {
   text-align: left; }
 
 .text-right {
@@ -491,11 +491,12 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 
 .row {
   margin-bottom: 15px; }
-
-[class^="col-"] {
-  margin-left: 15px; }
-  .row > [class^="col-"]:first-child {
-    margin-left: 0; }
+  .row [class*="col-"] {
+    float: left;
+    text-align: left;
+    padding-left: 15px; }
+    > .row [class*="col-"]:first-child {
+      padding-left: 0; }
 
 .col-1 {
   width: 6.5%; }
@@ -681,197 +682,197 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   margin-left: 0%; }
 
 .offset-1 {
-  margin-left: 6.5%; }
+  margin-left: 8.33333%; }
 
 .offset-2 {
-  margin-left: 13%; }
+  margin-left: 16.66667%; }
 
 .offset-3 {
-  margin-left: 19.5%; }
+  margin-left: 25%; }
 
 .offset-4 {
-  margin-left: 26%; }
+  margin-left: 33.33333%; }
 
 .offset-5 {
-  margin-left: 32.5%; }
+  margin-left: 41.66667%; }
 
 .offset-6 {
-  margin-left: 39%; }
+  margin-left: 50%; }
 
 .offset-7 {
-  margin-left: 45.5%; }
+  margin-left: 58.33333%; }
 
 .offset-8 {
-  margin-left: 52%; }
+  margin-left: 66.66667%; }
 
 .offset-9 {
-  margin-left: 58.5%; }
+  margin-left: 75%; }
 
 .offset-10 {
-  margin-left: 65%; }
+  margin-left: 83.33333%; }
 
 .offset-11 {
-  margin-left: 71.5%; }
+  margin-left: 91.66667%; }
 
 .offset-12 {
-  margin-left: 78%; }
+  margin-left: 100%; }
 
 @media (min-width: 1400px) {
   .offset-xl-0 {
     margin-left: 0%; }
 
   .offset-xl-1 {
-    margin-left: 6.5%; }
+    margin-left: 8.33333%; }
 
   .offset-xl-2 {
-    margin-left: 13%; }
+    margin-left: 16.66667%; }
 
   .offset-xl-3 {
-    margin-left: 19.5%; }
+    margin-left: 25%; }
 
   .offset-xl-4 {
-    margin-left: 26%; }
+    margin-left: 33.33333%; }
 
   .offset-xl-5 {
-    margin-left: 32.5%; }
+    margin-left: 41.66667%; }
 
   .offset-xl-6 {
-    margin-left: 39%; }
+    margin-left: 50%; }
 
   .offset-xl-7 {
-    margin-left: 45.5%; }
+    margin-left: 58.33333%; }
 
   .offset-xl-8 {
-    margin-left: 52%; }
+    margin-left: 66.66667%; }
 
   .offset-xl-9 {
-    margin-left: 58.5%; }
+    margin-left: 75%; }
 
   .offset-xl-10 {
-    margin-left: 65%; }
+    margin-left: 83.33333%; }
 
   .offset-xl-11 {
-    margin-left: 71.5%; }
+    margin-left: 91.66667%; }
 
   .offset-xl-12 {
-    margin-left: 78%; } }
+    margin-left: 100%; } }
 @media (min-width: 992px) {
   .offset-lg-0 {
     margin-left: 0%; }
 
   .offset-lg-1 {
-    margin-left: 6.5%; }
+    margin-left: 8.33333%; }
 
   .offset-lg-2 {
-    margin-left: 13%; }
+    margin-left: 16.66667%; }
 
   .offset-lg-3 {
-    margin-left: 19.5%; }
+    margin-left: 25%; }
 
   .offset-lg-4 {
-    margin-left: 26%; }
+    margin-left: 33.33333%; }
 
   .offset-lg-5 {
-    margin-left: 32.5%; }
+    margin-left: 41.66667%; }
 
   .offset-lg-6 {
-    margin-left: 39%; }
+    margin-left: 50%; }
 
   .offset-lg-7 {
-    margin-left: 45.5%; }
+    margin-left: 58.33333%; }
 
   .offset-lg-8 {
-    margin-left: 52%; }
+    margin-left: 66.66667%; }
 
   .offset-lg-9 {
-    margin-left: 58.5%; }
+    margin-left: 75%; }
 
   .offset-lg-10 {
-    margin-left: 65%; }
+    margin-left: 83.33333%; }
 
   .offset-lg-11 {
-    margin-left: 71.5%; }
+    margin-left: 91.66667%; }
 
   .offset-lg-12 {
-    margin-left: 78%; } }
+    margin-left: 100%; } }
 @media (max-width: 768px) {
   .offset-sm-0 {
     margin-left: 0%; }
 
   .offset-sm-1 {
-    margin-left: 6.5%; }
+    margin-left: 8.33333%; }
 
   .offset-sm-2 {
-    margin-left: 13%; }
+    margin-left: 16.66667%; }
 
   .offset-sm-3 {
-    margin-left: 19.5%; }
+    margin-left: 25%; }
 
   .offset-sm-4 {
-    margin-left: 26%; }
+    margin-left: 33.33333%; }
 
   .offset-sm-5 {
-    margin-left: 32.5%; }
+    margin-left: 41.66667%; }
 
   .offset-sm-6 {
-    margin-left: 39%; }
+    margin-left: 50%; }
 
   .offset-sm-7 {
-    margin-left: 45.5%; }
+    margin-left: 58.33333%; }
 
   .offset-sm-8 {
-    margin-left: 52%; }
+    margin-left: 66.66667%; }
 
   .offset-sm-9 {
-    margin-left: 58.5%; }
+    margin-left: 75%; }
 
   .offset-sm-10 {
-    margin-left: 65%; }
+    margin-left: 83.33333%; }
 
   .offset-sm-11 {
-    margin-left: 71.5%; }
+    margin-left: 91.66667%; }
 
   .offset-sm-12 {
-    margin-left: 78%; } }
+    margin-left: 100%; } }
 @media (max-width: 544px) {
   .offset-xs-0 {
     margin-left: 0%; }
 
   .offset-xs-1 {
-    margin-left: 6.5%; }
+    margin-left: 8.33333%; }
 
   .offset-xs-2 {
-    margin-left: 13%; }
+    margin-left: 16.66667%; }
 
   .offset-xs-3 {
-    margin-left: 19.5%; }
+    margin-left: 25%; }
 
   .offset-xs-4 {
-    margin-left: 26%; }
+    margin-left: 33.33333%; }
 
   .offset-xs-5 {
-    margin-left: 32.5%; }
+    margin-left: 41.66667%; }
 
   .offset-xs-6 {
-    margin-left: 39%; }
+    margin-left: 50%; }
 
   .offset-xs-7 {
-    margin-left: 45.5%; }
+    margin-left: 58.33333%; }
 
   .offset-xs-8 {
-    margin-left: 52%; }
+    margin-left: 66.66667%; }
 
   .offset-xs-9 {
-    margin-left: 58.5%; }
+    margin-left: 75%; }
 
   .offset-xs-10 {
-    margin-left: 65%; }
+    margin-left: 83.33333%; }
 
   .offset-xs-11 {
-    margin-left: 71.5%; }
+    margin-left: 91.66667%; }
 
   .offset-xs-12 {
-    margin-left: 78%; } }
+    margin-left: 100%; } }
 /*      layout
 -----------------------------------------------------------------------*/
 #wrapper, .wrap, #header, #footer, #main, section {
@@ -1054,9 +1055,17 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   background: #2B5114;
   position: relative;
   padding-bottom: 76px; }
+  @media (max-width: 768px) {
+    #banner {
+      padding-bottom: 130px; }
+      .ad #banner {
+        padding-bottom: 170px; } }
   #banner h2, #banner p {
     position: absolute;
     top: 260px; }
+    @media (max-width: 768px) {
+      #banner h2, #banner p {
+        top: 200px; } }
   #banner h2 {
     right: 10%;
     margin-top: -100px;
@@ -1066,6 +1075,9 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     font: 0/0 a;
     text-indent: -9999px;
     background: url(../images/aa/title.gif) 0 0 no-repeat; }
+    @media (max-width: 768px) {
+      #banner h2 {
+        margin-top: -90px; } }
   #banner .t2 {
     background-position: 0 -151px; }
   #banner p {
@@ -1073,13 +1085,20 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     font-size: 1.3125em;
     color: #fff;
     text-align: left; }
+    .ad #banner p {
+      max-width: 410px; }
   #banner img {
     position: relative;
     top: 76px;
     left: -7%; }
-    @media (max-width: 1399px) {
+    @media (max-width: 1279px) {
       #banner img {
-        width: 80%; } }
+        width: 55%;
+        left: -25%; } }
+    @media (max-width: 768px) {
+      #banner img {
+        top: 130px;
+        opacity: .5; } }
 
 form label {
   font-size: 1.3125em; }

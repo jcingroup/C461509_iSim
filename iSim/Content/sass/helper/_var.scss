@@ -141,7 +141,7 @@ $breakpoints: (
     sm:  544px,   // Small screen / phone
     md:  768px,   // Medium screen / tablet
     lg:  992px,   // Large screen / desktop
-    lg2: 1279px,  // Large screen / desktop
+    lg2: 1280px,  // Large screen / desktop
     xl:  1400px   // Extra large screen / wide desktop
 );
 
@@ -170,7 +170,7 @@ $medias: (
 
     xl:       (min-width: break(xl)),
 
-    lg2:      (max-width: break(lg2)),
+    md2:      (max-width: break(lg2)-1),
 );
 
 

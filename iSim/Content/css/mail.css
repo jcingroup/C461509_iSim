@@ -568,6 +568,13 @@ caption {
 #banner img {
   width: 100%; }
 
+.wrap {
+  max-width: 876px; }
+  @media (max-width: 768px) {
+    .wrap {
+      padding-right: 15px;
+      padding-left: 15px; } }
+
 main {
   padding: 40px 0;
   text-align: center; }
@@ -584,8 +591,7 @@ main {
 table {
   margin: auto;
   margin-bottom: 55px;
-  width: 100%;
-  max-width: 876px; }
+  width: 100%; }
   table em {
     color: #F8124C;
     font-style: normal;

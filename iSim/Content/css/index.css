@@ -315,7 +315,7 @@ address {
 .half {
   width: 46.9%; }
 
-.float-l, [class^="col-"] {
+.float-l {
   float: left; }
 
 .float-r {
@@ -339,7 +339,7 @@ address {
 .circle, .bottom a:first-child, .goTop, .intro a, #info li, #get nav a {
   border-radius: 50%; }
 
-.text-left, [class^="col-"] {
+.text-left {
   text-align: left; }
 
 .text-right {
@@ -403,11 +403,12 @@ address {
 
 .row {
   margin-bottom: 15px; }
-
-[class^="col-"] {
-  margin-left: 15px; }
-  .row > [class^="col-"]:first-child {
-    margin-left: 0; }
+  .row [class*="col-"] {
+    float: left;
+    text-align: left;
+    padding-left: 15px; }
+    > .row [class*="col-"]:first-child {
+      padding-left: 0; }
 
 .col-1 {
   width: 6.5%; }
@@ -593,197 +594,197 @@ address {
   margin-left: 0%; }
 
 .offset-1 {
-  margin-left: 6.5%; }
+  margin-left: 8.33333%; }
 
 .offset-2 {
-  margin-left: 13%; }
+  margin-left: 16.66667%; }
 
 .offset-3 {
-  margin-left: 19.5%; }
+  margin-left: 25%; }
 
 .offset-4 {
-  margin-left: 26%; }
+  margin-left: 33.33333%; }
 
 .offset-5 {
-  margin-left: 32.5%; }
+  margin-left: 41.66667%; }
 
 .offset-6 {
-  margin-left: 39%; }
+  margin-left: 50%; }
 
 .offset-7 {
-  margin-left: 45.5%; }
+  margin-left: 58.33333%; }
 
 .offset-8 {
-  margin-left: 52%; }
+  margin-left: 66.66667%; }
 
 .offset-9 {
-  margin-left: 58.5%; }
+  margin-left: 75%; }
 
 .offset-10 {
-  margin-left: 65%; }
+  margin-left: 83.33333%; }
 
 .offset-11 {
-  margin-left: 71.5%; }
+  margin-left: 91.66667%; }
 
 .offset-12 {
-  margin-left: 78%; }
+  margin-left: 100%; }
 
 @media (min-width: 1400px) {
   .offset-xl-0 {
     margin-left: 0%; }
 
   .offset-xl-1 {
-    margin-left: 6.5%; }
+    margin-left: 8.33333%; }
 
   .offset-xl-2 {
-    margin-left: 13%; }
+    margin-left: 16.66667%; }
 
   .offset-xl-3 {
-    margin-left: 19.5%; }
+    margin-left: 25%; }
 
   .offset-xl-4 {
-    margin-left: 26%; }
+    margin-left: 33.33333%; }
 
   .offset-xl-5 {
-    margin-left: 32.5%; }
+    margin-left: 41.66667%; }
 
   .offset-xl-6 {
-    margin-left: 39%; }
+    margin-left: 50%; }
 
   .offset-xl-7 {
-    margin-left: 45.5%; }
+    margin-left: 58.33333%; }
 
   .offset-xl-8 {
-    margin-left: 52%; }
+    margin-left: 66.66667%; }
 
   .offset-xl-9 {
-    margin-left: 58.5%; }
+    margin-left: 75%; }
 
   .offset-xl-10 {
-    margin-left: 65%; }
+    margin-left: 83.33333%; }
 
   .offset-xl-11 {
-    margin-left: 71.5%; }
+    margin-left: 91.66667%; }
 
   .offset-xl-12 {
-    margin-left: 78%; } }
+    margin-left: 100%; } }
 @media (min-width: 992px) {
   .offset-lg-0 {
     margin-left: 0%; }
 
   .offset-lg-1 {
-    margin-left: 6.5%; }
+    margin-left: 8.33333%; }
 
   .offset-lg-2 {
-    margin-left: 13%; }
+    margin-left: 16.66667%; }
 
   .offset-lg-3 {
-    margin-left: 19.5%; }
+    margin-left: 25%; }
 
   .offset-lg-4 {
-    margin-left: 26%; }
+    margin-left: 33.33333%; }
 
   .offset-lg-5 {
-    margin-left: 32.5%; }
+    margin-left: 41.66667%; }
 
   .offset-lg-6 {
-    margin-left: 39%; }
+    margin-left: 50%; }
 
   .offset-lg-7 {
-    margin-left: 45.5%; }
+    margin-left: 58.33333%; }
 
   .offset-lg-8 {
-    margin-left: 52%; }
+    margin-left: 66.66667%; }
 
   .offset-lg-9 {
-    margin-left: 58.5%; }
+    margin-left: 75%; }
 
   .offset-lg-10 {
-    margin-left: 65%; }
+    margin-left: 83.33333%; }
 
   .offset-lg-11 {
-    margin-left: 71.5%; }
+    margin-left: 91.66667%; }
 
   .offset-lg-12 {
-    margin-left: 78%; } }
+    margin-left: 100%; } }
 @media (max-width: 768px) {
   .offset-sm-0 {
     margin-left: 0%; }
 
   .offset-sm-1 {
-    margin-left: 6.5%; }
+    margin-left: 8.33333%; }
 
   .offset-sm-2 {
-    margin-left: 13%; }
+    margin-left: 16.66667%; }
 
   .offset-sm-3 {
-    margin-left: 19.5%; }
+    margin-left: 25%; }
 
   .offset-sm-4 {
-    margin-left: 26%; }
+    margin-left: 33.33333%; }
 
   .offset-sm-5 {
-    margin-left: 32.5%; }
+    margin-left: 41.66667%; }
 
   .offset-sm-6 {
-    margin-left: 39%; }
+    margin-left: 50%; }
 
   .offset-sm-7 {
-    margin-left: 45.5%; }
+    margin-left: 58.33333%; }
 
   .offset-sm-8 {
-    margin-left: 52%; }
+    margin-left: 66.66667%; }
 
   .offset-sm-9 {
-    margin-left: 58.5%; }
+    margin-left: 75%; }
 
   .offset-sm-10 {
-    margin-left: 65%; }
+    margin-left: 83.33333%; }
 
   .offset-sm-11 {
-    margin-left: 71.5%; }
+    margin-left: 91.66667%; }
 
   .offset-sm-12 {
-    margin-left: 78%; } }
+    margin-left: 100%; } }
 @media (max-width: 544px) {
   .offset-xs-0 {
     margin-left: 0%; }
 
   .offset-xs-1 {
-    margin-left: 6.5%; }
+    margin-left: 8.33333%; }
 
   .offset-xs-2 {
-    margin-left: 13%; }
+    margin-left: 16.66667%; }
 
   .offset-xs-3 {
-    margin-left: 19.5%; }
+    margin-left: 25%; }
 
   .offset-xs-4 {
-    margin-left: 26%; }
+    margin-left: 33.33333%; }
 
   .offset-xs-5 {
-    margin-left: 32.5%; }
+    margin-left: 41.66667%; }
 
   .offset-xs-6 {
-    margin-left: 39%; }
+    margin-left: 50%; }
 
   .offset-xs-7 {
-    margin-left: 45.5%; }
+    margin-left: 58.33333%; }
 
   .offset-xs-8 {
-    margin-left: 52%; }
+    margin-left: 66.66667%; }
 
   .offset-xs-9 {
-    margin-left: 58.5%; }
+    margin-left: 75%; }
 
   .offset-xs-10 {
-    margin-left: 65%; }
+    margin-left: 83.33333%; }
 
   .offset-xs-11 {
-    margin-left: 71.5%; }
+    margin-left: 91.66667%; }
 
   .offset-xs-12 {
-    margin-left: 78%; } }
+    margin-left: 100%; } }
 /*      layout
 -----------------------------------------------------------------------*/
 #wrapper, .wrap, #header, #footer, #main, section {
@@ -1154,7 +1155,7 @@ section {
       line-height: 2.2; }
     .products article.p1 {
       padding-top: 100px;
-      padding-bottom: 40px; }
+      padding-bottom: 60px; }
       .products article.p1::before {
         background-image: url(../images/index/productBg3.gif);
         top: -15px;
@@ -1163,6 +1164,7 @@ section {
         .products article.p1 {
           padding-bottom: 0; } }
       .products article.p1 img {
+        vertical-align: middle;
         margin-left: 2%; }
         @media (min-width: 1400px) {
           .products article.p1 img {
@@ -1248,15 +1250,13 @@ section {
     color: #56901B;
     font-size: 2em;
     font-family: MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
-    line-height: 1.8;
-    margin-top: 10px;
     margin-bottom: 5px; }
   #info p {
     color: #656565;
     font-size: 1.4375em;
     font-weight: bold;
     line-height: 1.2;
-    margin-top: -48px; }
+    margin-top: -35px; }
   #info a {
     color: #000;
     font-size: 1.25em;
@@ -1280,8 +1280,9 @@ section {
       border-color: #405F1B; }
     #info li:first-child h3 {
       background: url(../images/index/icon_title2.gif) right 0 no-repeat;
-      padding-right: 35px;
-      margin-right: 13px; }
+      padding-right: 10px;
+      margin-right: 30px;
+      margin-top: -20px; }
   #info ul {
     left: -2%;
     position: relative; }
@@ -1314,7 +1315,7 @@ section {
     @media (max-width: 768px) {
       #get::after {
         display: none; } }
-    @media (max-width: 991px) {
+    @media (max-width: 1279px) {
       #get::after {
         background-size: contain;
         left: 10px;
@@ -1323,6 +1324,9 @@ section {
   #get div {
     position: relative;
     z-index: 5; }
+    @media (min-width: 959px) and (max-width: 1279px) {
+      #get div {
+        margin-left: 41%; } }
   #get header {
     color: #085E80; }
   #get p {
@@ -1373,21 +1377,22 @@ section {
 #faq {
   background: url(../images/index/faqBg.gif) 0 0 repeat;
   padding-top: 30px; }
+  #faq header, #faq dt, #faq dd {
+    text-align: left; }
   #faq header {
     color: #E43C16;
-    text-align: left;
     margin-bottom: 30px; }
   #faq dl {
     color: #656565;
     font-size: 1.375em;
     font-weight: bold; }
   #faq dt, #faq dd {
-    line-height: 1.5; }
+    line-height: 1.5;
+    text-indent: -27px;
+    margin-left: 27px; }
   #faq dt {
     color: #221714; }
   #faq dd {
-    text-indent: -27px;
-    margin-left: 27px;
     margin-bottom: 30px; }
     #faq dd a {
       color: #5B9EE6;

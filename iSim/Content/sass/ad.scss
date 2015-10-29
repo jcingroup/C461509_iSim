@@ -34,15 +34,20 @@ $text-color:            #5C5C5C;
 	background: #2B5114;
 	position: relative;
 	padding-bottom: 76px;
-
+	@include media(sm) {
+		padding-bottom: 130px;
+		.ad & { padding-bottom: 170px; }
+	}
 	h2, p {
 		@include absolute(top 260px);
+		@include media(sm) { top: 200px; }
 	}
 	h2 {
 		right: cp(130px);
 		margin-top: -100px;
 		background-attachment: fixed;
 		@include text-pic('aa/title.gif',333px,76px);
+		@include media(sm) { margin-top: -90px; }
 	}
 	.t2 { background-position: 0 -151px;}
 	p {
@@ -50,13 +55,13 @@ $text-color:            #5C5C5C;
 		font-size: em(21px);
 		color: #fff;
 		text-align: left;
+		.ad & { max-width: 410px; }
 	}
 	img {
 		position: relative;
 		top: 76px; left: -7%;
-		@include media(lg) {
-			width: 80%;
-		}
+		@include media(md2) { width: 55%; left: -25%; }
+		@include media(sm) { top: 130px; opacity: .5; }
 	}
 }
 
