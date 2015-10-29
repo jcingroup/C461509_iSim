@@ -129,7 +129,9 @@
   <ItemGroup>
     <Content Include="ad.html" />
     <Content Include="ad2.html" />
+    <Content Include="comic.html" />
     <Content Include="Content\css\ad.css" />
+    <Content Include="Content\css\comic.css" />
     <Content Include="Content\css\index.css" />
     <Content Include="Content\css\mail.css" />
     <Content Include="Content\images\aa\banner.png" />
@@ -170,13 +172,8 @@
     <Content Include="Content\images\mail\logo.gif" />
     <Content Include="Content\images\mail\titleBg.gif" />
     <Content Include="Content\images\qrcode.gif" />
-    <Content Include="Content\js\bxslider\jquery.bxslider.css" />
-    <Content Include="Content\js\bxslider\jquery.bxslider.js" />
-    <Content Include="Content\js\bxslider\jquery.bxslider.min.css" />
-    <Content Include="Content\js\bxslider\jquery.bxslider.min.js" />
     <Content Include="Content\js\setting.js" />
-    <Content Include="Content\js\swiper\swiper.min.css" />
-    <Content Include="Content\js\swiper\swiper.min.js" />
+    <Content Include="Content\js\tab.js" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="GACode.html" />
@@ -242,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Content\images\comic\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -249,6 +247,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
+    <Content Include="Content\sass\comic.scss" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Home\Email.cshtml" />
   </ItemGroup>
