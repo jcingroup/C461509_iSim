@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>i-Sim活動網站:廣告合作</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <!--[if lt IE 9]><script src="//ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script><![endif]-->
+    <link href="Content/css/ad.css" rel="stylesheet">
+    <script src="Scripts/w_comminc.js"></script>
+    <script>
+        $("document").ready(function () {
+            $("#adInfo").submit(function (event) {
+                event.preventDefault();
+                var company_name = $("#m_company_name").val();
+                var contact_person = $("#m_contact_person").val();
+                var tel = $("#m_tel").val();
+                var email = $("#m_email").val();
+                var occupation = $("#m_occupation").val();
+                var content = $("#m_content").val();
+
+                var data = {
+                    "email_type":1,
+                    "company_name": company_name,
+                    "contact_person": contact_person,
+                    "tel": tel,
+                    "email": email,
+                    "occupation": occupation,
+                    "content": content
+                };
+                jqPost('http://'+location.host + '/Home/sendMail', data).done(function (data, textStatus, jqXHRdata) {
+                    if (!data.result) {
+                        alert(data.message);
+                    }
+                    else {
+                        alert('申請已送出，我們會儘快與您聯絡!');
+                    }
+                }).fail(function (jqXHR, textStatus, errorThrown) {
+                    showAjaxError(errorThrown);
+                });
+            });
+        }); //Begin of Jquery Statement
+    </script>
+</head>
+
+<body class="ad">
+
+    <div id="wrapper">
+
+        <header id="header"></header><!-- header //-->
+
+        <div id="banner">
+            <img src="Content/images/aa/banner.png">
+            <h2 class="t1">廣告合作</h2>
+            <p>「i-Sim開心APP」是一個專為訪台港澳旅客而設的手機APP。旅客搜尋餐廳商戶，甚至接收優惠資訊。連結「i-Sim開心遊台電話卡」，旅客更可免費無線通話及3G上網。</p>
+        </div>
+
+        <main>
+            <header>聯絡表格</header>
+            <div class="wrap row">
+                <ul class="col-6 col-sm-12 list-unstyled">
+                    <li>現在您只需提供簡單精美的圖片及簡介資料介紹您的寶號，</li>
+                    <li>並交由我們的銷售專員，</li>
+                    <li>我們便會將貴寶號的資訊放置在iSim開心APP內供旅客查閱。</li>
+                    <li>廣告銷售熱線：00-0000-0000</li>
+                    <li>廣告銷售電郵：<a href="mailto:sales@greenisim.com.tw">sales@greenisim.com.tw</a></li>
+                </ul>
+
+                <form class="col-6 col-sm-12" id="adInfo">
+                    <p>
+                        <label>公司名稱<em>*</em></label>
+                        <input type="text" id="m_company_name" required>
+                    </p>
+                    <p>
+                        <label>聯絡人姓名<em>*</em></label>
+                        <input type="text" id="m_contact_person" required>
+                    </p>
+                    <p>
+                        <label>電子郵件<em>*</em></label>
+                        <input type="email" id="m_email" required>
+                    </p>
+                    <p>
+                        <label>電話號碼<em>*</em></label>
+                        <input type="text" id="m_tel" required>
+                    </p>
+                    <p>
+                        <label>業務性質(如餐飲、飾品、服裝…)</label>
+                        <input type="text" id="m_occupation">
+                    </p>
+                    <p>
+                        <label>廣告內容</label>
+                        <input type="text" id="m_content">
+                    </p>
+                    <button class="btn btn-green" type="submit">送出</button>
+                </form><!-- col //-->
+            </div><!-- wrap //-->
+        </main>
+
+    </div><!-- wrapper //-->
+
+    <footer id="footer"></footer><!-- footer -->
+
+    <script src="Content/js/BrowerInfo.js"></script>
+    <script src="Content/js/setting.js"></script>
+
+    <!-- CRETA tracking pixel -->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=UA-61256035-6"
+                height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+            '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'UA-61256035-6');</script>
+    <!-- End CRETA tracking pixel -->
+</body>
+</html>
