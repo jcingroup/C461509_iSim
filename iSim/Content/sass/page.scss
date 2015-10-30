@@ -1,0 +1,64 @@
+@charset "UTF-8";
+
+$text-color:            #5C5C5C;
+
+// import
+// ------------------------------------------------------------
+@import "helper/function";
+@import "helper/var";
+@import "helper/mixins";
+
+@import "base/basic";
+@import "base/form";
+
+@import "component/classes";
+@import "component/btn";
+
+@import "layout/grid";
+@import "layout/layout";
+
+
+
+// elements
+// ----------------------------------------------------------------------
+.wrap {
+	padding: 0 $gutter;
+	max-width: 1226px;
+}
+#header h1 {
+	background-image: url(#{$img-path}/logo.gif);
+	@include size(179px,75px);
+}
+#banner {
+	background: #2B5114 url(#{$img-path}/aa/banner.png) 10% bottom no-repeat;
+	height: 785px;
+	position: relative;
+	h2, p {
+		@include absolute(left 50% top 33%);
+		margin-left: 150px;
+	}
+	h2 {
+		margin-top: -100px;
+		background-attachment: fixed;
+		@include text-pic('aa/title.gif',333px,76px);
+	}
+	p {
+		font-size: em(21px);
+		color: #fff;
+		text-align: left;
+	}
+}
+
+form {
+    label { font-size: em(21px); }
+    em { color: #F8124C }
+}
+button { background: none; }
+
+main {
+	header {
+		font-size: 62px;
+		font-family: $font-sp;
+		line-height: 99px;
+	}
+}

@@ -1056,22 +1056,15 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   height: 75px; }
 
 #banner {
-  background: #2B5114;
-  position: relative;
-  padding-bottom: 76px; }
-  @media all and (max-width: 768px) {
-    #banner {
-      padding-bottom: 130px; }
-      .ad #banner {
-        padding-bottom: 170px; } }
+  background: #2B5114 url(../images/aa/banner.png) 10% bottom no-repeat;
+  height: 785px;
+  position: relative; }
   #banner h2, #banner p {
     position: absolute;
-    top: 260px; }
-    @media all and (max-width: 768px) {
-      #banner h2, #banner p {
-        top: 200px; } }
+    top: 33%;
+    left: 50%;
+    margin-left: 150px; }
   #banner h2 {
-    right: 10%;
     margin-top: -100px;
     background-attachment: fixed;
     width: 333px;
@@ -1079,30 +1072,10 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     font: 0/0 a;
     text-indent: -9999px;
     background: url(../images/aa/title.gif) 0 0 no-repeat; }
-    @media all and (max-width: 768px) {
-      #banner h2 {
-        margin-top: -90px; } }
-  #banner .t2 {
-    background-position: 0 -151px; }
   #banner p {
-    right: 2%;
     font-size: 1.3125em;
     color: #fff;
     text-align: left; }
-    .ad #banner p {
-      max-width: 410px; }
-  #banner img {
-    position: relative;
-    top: 76px;
-    left: -7%; }
-    @media all and (max-width: 1279px) {
-      #banner img {
-        width: 55%;
-        left: -25%; } }
-    @media all and (max-width: 768px) {
-      #banner img {
-        top: 130px;
-        opacity: .5; } }
 
 form label {
   font-size: 1.3125em; }
@@ -1110,27 +1083,9 @@ form em {
   color: #F8124C; }
 
 button {
-  background: none;
-  float: right;
-  margin-top: 20px;
-  width: 250px; }
+  background: none; }
 
-main {
-  padding: 40px 0; }
-  main header {
-    background: url(../images/aa/titleBg.gif) 0 center no-repeat;
-    color: #fff;
-    font-size: 3.4375em;
-    font-family: MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
-    line-height: 99px;
-    text-align: left;
-    margin-bottom: 30px;
-    padding-left: 3%; }
-
-ul {
-  font-size: 1.3125em;
-  font-weight: bold; }
-  ul li {
-    margin: 10px 0; }
-  ul a {
-    color: #5C5C5C; }
+main header {
+  font-size: 62px;
+  font-family: MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
+  line-height: 99px; }

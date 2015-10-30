@@ -374,17 +374,15 @@ address {
   max-width: 1440px;
   margin: 0 auto; }
 
-#header, #footer, #main, section {
-  min-width: 1008px; }
-  @media (max-width: 991px) {
-    #header, #footer, #main, section {
-      min-width: auto; } }
+@media all and (min-width: 992px) {
+  #header, #footer, #main, section {
+    min-width: 1008px; } }
 
 #wrapper {
   min-height: 100%;
   padding-bottom: 50px;
   background: #fff; }
-  @media (max-width: 768px) {
+  @media all and (max-width: 768px) {
     #wrapper {
       padding-bottom: 100px; } }
 
@@ -402,7 +400,7 @@ address {
     position: absolute;
     top: 28px;
     left: 5%; }
-    @media (max-width: 544px) {
+    @media all and (max-width: 544px) {
       #header h1 {
         top: 15px;
         left: 10px;
@@ -417,7 +415,7 @@ address {
   position: absolute;
   top: 38px;
   right: 20px; }
-  @media (max-width: 544px) {
+  @media all and (max-width: 544px) {
     .top-nav {
       font-size: 1em;
       right: 10px;
@@ -451,14 +449,14 @@ address {
   z-index: 3;
   color: #fff;
   padding: 15px; }
-  @media (max-width: 768px) {
+  @media all and (max-width: 768px) {
     #footer {
       margin-top: -100px;
       height: 100px; } }
 
 .explain {
   float: right; }
-  @media (max-width: 768px) {
+  @media all and (max-width: 768px) {
     .explain {
       float: none;
       text-align: center;
@@ -472,15 +470,21 @@ address {
   font-size: 1.0625em;
   text-align: left; }
 
+@media all and (max-width: 768px) {
+  .bottom, .goTop {
+    -webkit-transform: scale(0.6) translateX(40%);
+    -o-transform: scale(0.6) translateX(40%);
+    transform: scale(0.6) translateX(40%); } }
+
 .bottom {
   position: fixed;
-  right: -17px;
-  bottom: 180px;
-  width: 130px;
-  padding: 12px 17px 20px 3px;
+  right: 0;
+  bottom: 16%;
+  width: 115px;
+  padding: 15px 3px;
   background: #fff;
   border-radius: 15px 0 0 15px;
-  box-shadow: -15px 15px 0 rgba(203, 201, 200, 0.5);
+  box-shadow: -10px 15px 0 rgba(203, 201, 200, 0.5);
   z-index: 71; }
   .bottom a {
     display: block;
@@ -502,8 +506,8 @@ address {
 
 .goTop {
   position: fixed;
-  right: 10px;
-  bottom: 55px;
+  right: 1%;
+  bottom: 4%;
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -534,11 +538,6 @@ address {
     background: #fff;
     color: #13a7df; }
 
-#header h1 {
-  background-image: url(../images/mail/logo.gif);
-  width: 238px;
-  height: 86px; }
-
 .top-nav a, .top-nav span {
   color: #656565;
   font-size: 0.875em; }
@@ -555,7 +554,25 @@ h3 {
 .tabs {
   background: #72B444;
   padding: 20px 0;
-  margin-bottom: 0; }
+  margin: 0; }
+  .tabs p {
+    color: #656565;
+    font-size: 1.4375em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-top: -35px; }
+  .tabs a {
+    color: #000;
+    font-size: 1.25em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    .tabs a:hover, .tabs a:active {
+      color: #37BCEE; }
   .tabs li {
     display: inline-block;
     width: 276px;
@@ -573,22 +590,34 @@ h3 {
       padding-right: 10px;
       margin-right: 30px;
       margin-top: -20px; }
-  .tabs p {
-    color: #656565;
-    font-size: 1.4375em;
-    font-weight: bold;
-    line-height: 1.2;
-    margin-top: -35px; }
-  .tabs a {
-    color: #000;
-    font-size: 1.25em;
-    font-weight: bold;
-    margin-left: -49px;
-    position: absolute;
-    bottom: 20%;
-    left: 50%; }
-    .tabs a:hover, .tabs a:active {
-      color: #37BCEE; }
+      @media all and (max-width: 320px) {
+        .tabs li:first-child h3 {
+          background: none;
+          padding: 0;
+          margin: 0; } }
+    @media all and (max-width: 768px) {
+      .tabs li {
+        max-width: 220px;
+        max-height: 220px;
+        padding-top: 50px; }
+        .tabs li h3 {
+          font-size: 1.375em; }
+        .tabs li p {
+          font-size: 1.125em;
+          margin-top: -15px; } }
+    @media all and (max-width: 320px) {
+      .tabs li {
+        max-width: 142px;
+        max-height: 142px;
+        padding: 23px 10px; }
+        .tabs li h3 {
+          font-size: 1.0625em; }
+        .tabs li p {
+          font-size: 0.8125em;
+          margin-top: -25px; }
+        .tabs li a {
+          font-size: 0.75em;
+          min-width: 142px; } }
 
 .tabs-content img {
   width: 100%; }

@@ -20,10 +20,10 @@ $text-color:            #5C5C5C;
 
 // elements
 // ----------------------------------------------------------------------
-#header h1 {
-    background-image: url(#{$img-path2}/logo.gif);
-    @include size(238px,86px);
-}
+// #header h1 {
+//     background-image: url(#{$img-path2}/logo.gif);
+//     @include size(238px,86px);
+// }
 .top-nav {
     a, span { color: #656565; font-size: em(14px); }
 }

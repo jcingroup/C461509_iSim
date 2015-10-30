@@ -95,7 +95,7 @@ $border-radius:             5px 15px 3px;
 // 情境狀態 + 配色
 $state-type: (
     // primary:                $brand-primary,
-    gray:                  lighten($gray,27%),
+    grays:                  lighten($gray,27%),
     // success:                $success,
     // info:                   $info,
     // warn:                   $warning,
@@ -137,7 +137,7 @@ $color: map-extend($state-type, $table-color, $form-color);
 
 // 中斷點
 $breakpoints: (
-    xs:  320,     // Extra small screen / phone
+    xs:  320px,     // Extra small screen / phone
     sm:  544px,   // Small screen / phone
     md:  768px,   // Medium screen / tablet
     lg:  992px,   // Large screen / desktop
@@ -157,6 +157,7 @@ $wrap-widths: (
 
 // media queries
 $medias: (
+    xss:      (max-width: break(xs)),
     xs:       (max-width: break(sm)),
 
     sm:       (max-width: break(md)),

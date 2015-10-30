@@ -396,17 +396,15 @@ caption {
   max-width: 1440px;
   margin: 0 auto; }
 
-#header, #footer, #main, section {
-  min-width: 1008px; }
-  @media (max-width: 991px) {
-    #header, #footer, #main, section {
-      min-width: auto; } }
+@media all and (min-width: 992px) {
+  #header, #footer, #main, section {
+    min-width: 1008px; } }
 
 #wrapper {
   min-height: 100%;
   padding-bottom: 125px;
   background: #fff; }
-  @media (max-width: 768px) {
+  @media all and (max-width: 768px) {
     #wrapper {
       padding-bottom: 175px; } }
 
@@ -424,7 +422,7 @@ caption {
     position: absolute;
     top: 28px;
     left: 5%; }
-    @media (max-width: 544px) {
+    @media all and (max-width: 544px) {
       #header h1 {
         top: 15px;
         left: 10px;
@@ -439,7 +437,7 @@ caption {
   position: absolute;
   top: 38px;
   right: 20px; }
-  @media (max-width: 544px) {
+  @media all and (max-width: 544px) {
     .top-nav {
       font-size: 1em;
       right: 10px;
@@ -473,14 +471,14 @@ caption {
   z-index: 3;
   color: #fff;
   padding: 15px; }
-  @media (max-width: 768px) {
+  @media all and (max-width: 768px) {
     #footer {
       margin-top: -100px;
       height: 100px; } }
 
 .explain {
   float: right; }
-  @media (max-width: 768px) {
+  @media all and (max-width: 768px) {
     .explain {
       float: none;
       text-align: center;
@@ -494,15 +492,21 @@ caption {
   font-size: 1.0625em;
   text-align: left; }
 
+@media all and (max-width: 768px) {
+  .bottom, .goTop {
+    -webkit-transform: scale(0.6) translateX(40%);
+    -o-transform: scale(0.6) translateX(40%);
+    transform: scale(0.6) translateX(40%); } }
+
 .bottom {
   position: fixed;
-  right: -17px;
-  bottom: 180px;
-  width: 130px;
-  padding: 12px 17px 20px 3px;
+  right: 0;
+  bottom: 16%;
+  width: 115px;
+  padding: 15px 3px;
   background: #fff;
   border-radius: 15px 0 0 15px;
-  box-shadow: -15px 15px 0 rgba(203, 201, 200, 0.5);
+  box-shadow: -10px 15px 0 rgba(203, 201, 200, 0.5);
   z-index: 71; }
   .bottom a {
     display: block;
@@ -524,8 +528,8 @@ caption {
 
 .goTop {
   position: fixed;
-  right: 10px;
-  bottom: 55px;
+  right: 1%;
+  bottom: 4%;
   display: inline-block;
   width: 100px;
   height: 100px;
@@ -556,11 +560,6 @@ caption {
     background: #fff;
     color: #13a7df; }
 
-#header h1 {
-  background-image: url(../images/mail/logo.gif);
-  width: 238px;
-  height: 86px; }
-
 .top-nav a, .top-nav span {
   color: #656565;
   font-size: 0.875em; }
@@ -570,7 +569,7 @@ caption {
 
 .wrap {
   max-width: 876px; }
-  @media (max-width: 768px) {
+  @media all and (max-width: 768px) {
     .wrap {
       padding-right: 15px;
       padding-left: 15px; } }
