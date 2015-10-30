@@ -12,7 +12,15 @@ article h2,
 #info h3,
 #ad a,
 main header,
-h3 {
+figure h3 {
     font-family: $font-family-base;
     font-weight: bold;
+}
+
+.ad ,
+.ad2 {
+	#banner strong {
+		background-image: url(#{$img-path}/aa/title_cn.png);
+		height: 91px;
+	}
 }

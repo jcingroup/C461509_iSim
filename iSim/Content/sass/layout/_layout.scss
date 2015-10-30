@@ -5,6 +5,8 @@ $content-spacing:       75px !default;
 
 // header
 $header-height:         112px;
+$logo-img:              'logo.png' !default;
+$logo-size:             235px, 83px !default;
 
 $menu-height:           70px;
 $menu-height-sm:        100%;
@@ -83,7 +85,7 @@ $goTop:                 (bottom 10px), (right 15px) !default;
         cursor: pointer; cursor: hand; // for ie
         z-index: z(logo);
 
-        @include text-pic('logo.png', 235px, 83px);
+        @include text-pic($logo-img, nth($logo-size,1),  nth($logo-size,2));
         @include absolute(left cp(70px) top 28px);
 
         @include media(xs) {
@@ -95,11 +97,12 @@ $goTop:                 (bottom 10px), (right 15px) !default;
 }
 
 .lan-nav {
-    @include absolute(right 116px top 40px);
     font-size: em(26px);
     color: #fff;
     line-height: 34px;
     z-index: z(logo)+1;
+    @include absolute(right 116px top 40px);
+    @include media(xs) { font-size: em(14px); right: 100px; top: 15px; }
 }
 .top-nav {
     text-align: right;
@@ -107,7 +110,7 @@ $goTop:                 (bottom 10px), (right 15px) !default;
 
     @include absolute(right 20px top 38px);
     @include media(xs) {
-        font-size: em(16px);
+        font-size: em(12px);
         right: 10px; top: 12px;
     }
 
@@ -116,19 +119,8 @@ $goTop:                 (bottom 10px), (right 15px) !default;
         vertical-align: middle;
         margin-left: 8px;
 
-        &.club {
-            background-attachment: fixed;
-            @include text-pic('icon_club.png', 35px, 35px);
-        }
-        &:last-of-type {
-            background-position: -92px 0;
-        }
-        // @for $i from 3 through 4 {
-        //     $icon-x: 0 0 -45px -92px;
-        //     &:nth-child(#{$i}) {
-        //         background-position: nth($icon-x, $i) 0;
-        //     }
-        // }
+        &.club { @include text-pic('icon_club.png', 35px, 35px, fixed); }
+        &:last-of-type { background-position: -92px 0; }
     }
     span {
         display: block;
@@ -181,7 +173,6 @@ footer {
 .bottom, .goTop {
     @include media(sm) {
         @include prefix(transform,scale(0.6) translateX(40%));
-        // @include prefix(transform,scale(0.6));
     }
 }
 .bottom {

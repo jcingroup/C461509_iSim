@@ -3,6 +3,9 @@
 $img-path2:             '../images/aa';
 $text-color:            #5C5C5C;
 
+$logo-img:              'aa/logo.gif';
+$logo-size:             179px, 75px;
+
 // import
 // ------------------------------------------------------------
 @import "helper/function";
@@ -23,46 +26,45 @@ $text-color:            #5C5C5C;
 // elements
 // ----------------------------------------------------------------------
 .wrap {
-	padding: 0 $gutter;
-	max-width: 1226px;
-}
-#header h1 {
-	background-image: url(#{$img-path}/logo.gif);
-	@include size(179px,75px);
+    padding: 0 $gutter;
+    max-width: 1226px;
 }
 #banner {
-	background: #2B5114;
-	position: relative;
-	padding-bottom: 76px;
-	@include media(sm) {
-		padding-bottom: 130px;
-		.ad & { padding-bottom: 170px; }
-	}
-	h2, p {
-		@include absolute(top 260px);
-		@include media(sm) { top: 200px; }
-	}
-	h2 {
-		right: cp(130px);
-		margin-top: -100px;
-		background-attachment: fixed;
-		@include text-pic('aa/title.gif',333px,76px);
-		@include media(sm) { margin-top: -90px; }
-	}
-	.t2 { background-position: 0 -151px;}
-	p {
-		right: cp(20px);
-		font-size: em(21px);
-		color: #fff;
-		text-align: left;
-		.ad & { max-width: 410px; }
-	}
-	img {
-		position: relative;
-		top: 76px; left: -7%;
-		@include media(md2) { width: 55%; left: -25%; }
-		@include media(sm) { top: 130px; opacity: .5; }
-	}
+    background: #2B5114;
+    position: relative;
+    padding-bottom: 76px;
+    text-align: left;
+    header {
+        font-size: em(21px);
+        color: #fff;
+        text-align: left;
+        width: 370px;
+        @include absolute(top 36% right cp(50px));
+    }
+    strong {
+        @include text-pic('aa/title.png',332px,76px,fixed);
+        display: block;
+        margin-bottom: 30px;
+    }
+    .t2 { background-position: 0 bottom;}
+    img {
+        position: relative;
+        top: 76px;
+        @include media(md2) { width: 55%; }
+    }
+    @include media(sm) {
+        padding-bottom: 130px;
+        .ad & { min-height: 445px; }
+        img { display: none; }
+        header { left: 15px; right: 15px; width: 93%; }
+    }
+    @include media(xss) {
+        header { max-width: 280px; }
+        strong {
+            width: 100%;
+            background-size: cover;
+        }
+    }
 }
 
 form {
@@ -70,30 +72,30 @@ form {
     em { color: #F8124C }
 }
 button {
-	background: none;
-	float: right;
-	margin-top: 20px;
-	width: 250px;
+    background: none;
+    float: right;
+    margin-top: 20px;
+    width: 100%;
 }
 
 main {
-	padding: 40px 0;
-	header {
-		background: url(#{$img-path2}/titleBg.gif) 0 center no-repeat;
+    padding: 40px 0;
+    header {
+        background: url(#{$img-path2}/titleBg.gif) 0 center no-repeat;
 
-		color: #fff;
-		font-size: em(55px);
-		font-family: $font-sp;
-		line-height: 99px;
-		text-align: left;
+        color: #fff;
+        font-size: em(55px);
+        font-family: $font-sp;
+        line-height: 99px;
+        text-align: left;
 
-		margin-bottom: 30px;
-		padding-left: cp(40px);
-	}
+        margin-bottom: 30px;
+        padding-left: cp(40px);
+    }
 }
 ul {
-	font-size: em(21px);
-	font-weight: bold;
-	li { margin: 10px 0; }
-	a { color: $text-color; }
+    font-size: em(21px);
+    font-weight: bold;
+    li { margin: 10px 0; }
+    a { color: $text-color; }
 }

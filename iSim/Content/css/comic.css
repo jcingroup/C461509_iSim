@@ -205,7 +205,7 @@ html, body {
   height: 100%; }
 
 body {
-  background: #FEF8AF;
+  background: #2b5114;
   color: #5C5C5C;
   font-family: "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
   line-height: 1.25; }
@@ -336,7 +336,7 @@ address {
 .hidden {
   display: none; }
 
-.circle, .bottom a:first-child, .goTop, .tabs li {
+.circle, figure, .bottom a:first-child, .goTop {
   border-radius: 50%; }
 
 .text-left {
@@ -357,6 +357,121 @@ address {
     display: inline-block;
     padding-left: 5px;
     padding-right: 5px; }
+
+figure {
+  position: relative;
+  margin: 0.2%;
+  background: rgba(255, 255, 255, 0.7) url(../images/comic/arrow.gif) center 228px no-repeat;
+  text-align: center;
+  cursor: pointer; }
+  figure figcaption {
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    figure figcaption::before, figure figcaption::after {
+      pointer-events: none; }
+    figure figcaption, figure figcaption > a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    figure figcaption > a {
+      z-index: 1000;
+      white-space: nowrap;
+      font-size: 0;
+      opacity: 0; }
+
+figure {
+  display: inline-block;
+  width: 275px;
+  height: 275px;
+  display: inline-block;
+  border: 4px solid #8A901B;
+  vertical-align: middle;
+  padding: 65px 0; }
+  figure:nth-child(even) {
+    border-color: #405F1B; }
+  figure h3 {
+    color: #56901B;
+    font-size: 2em;
+    font-family: MElleHK, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
+    margin-bottom: 5px; }
+  figure p {
+    color: #656565;
+    font-size: 1.4375em;
+    font-weight: bold;
+    line-height: 1.2;
+    position: absolute;
+    top: 46%;
+    right: 0;
+    left: 0; }
+  figure > a {
+    color: #000;
+    font-size: 1.25em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    figure > a:hover, figure > a:active {
+      color: #37BCEE; }
+  figure:hover a, figure:active a {
+    color: #37BCEE; }
+  figure.item1 {
+    margin-left: -2%; }
+    @media all and (max-width: 768px) {
+      figure.item1 {
+        margin-left: 0; } }
+    figure.item1 h3 {
+      background: url(../images/index/icon_title2.gif) right 0 no-repeat;
+      padding-right: 10px;
+      margin-right: 30px;
+      margin-top: -20px; }
+      @media all and (max-width: 320px) {
+        figure.item1 h3 {
+          background: none;
+          padding: 0;
+          margin: 0; } }
+  figure.item2 p {
+    padding-top: 2%; }
+  figure:last-child::after {
+    content: '';
+    display: block;
+    background: url(../images/comic/info_pic.png) 0 0 no-repeat;
+    width: 109px;
+    height: 230px;
+    position: absolute;
+    right: -80px;
+    bottom: 0; }
+    @media all and (max-width: 768px) {
+      figure:last-child::after {
+        display: none; } }
+  @media all and (max-width: 768px) {
+    figure {
+      max-width: 220px;
+      max-height: 220px;
+      padding-top: 50px; }
+      figure h3 {
+        font-size: 1.375em; }
+      figure p {
+        font-size: 1.125em; }
+      figure a {
+        min-width: 142px;
+        text-decoration: underline; } }
+  @media all and (max-width: 320px) {
+    figure {
+      max-width: 142px;
+      max-height: 142px;
+      padding: 23px 10px; }
+      figure h3 {
+        font-size: 1.0625em; }
+      figure p {
+        font-size: 0.8125em; }
+      figure a {
+        font-size: 0.75em; } }
 
 /*      layout
 -----------------------------------------------------------------------*/
@@ -385,11 +500,12 @@ address {
     cursor: pointer;
     cursor: hand;
     z-index: 50;
-    width: 235px;
-    height: 83px;
+    background-attachment: fixed;
+    background: url(../images/mail/logo.gif) 0 0 no-repeat;
     font: 0/0 a;
     text-indent: -9999px;
-    background: url(../images/logo.png) 0 0 no-repeat;
+    width: 243px;
+    height: 82px;
     position: absolute;
     top: 28px;
     left: 5%; }
@@ -402,13 +518,18 @@ address {
         height: 70px; } }
 
 .lan-nav {
-  position: absolute;
-  top: 40px;
-  right: 116px;
   font-size: 1.625em;
   color: #fff;
   line-height: 34px;
-  z-index: 51; }
+  z-index: 51;
+  position: absolute;
+  top: 40px;
+  right: 116px; }
+  @media all and (max-width: 544px) {
+    .lan-nav {
+      font-size: 0.875em;
+      right: 100px;
+      top: 15px; } }
 
 .top-nav {
   text-align: right;
@@ -418,7 +539,7 @@ address {
   right: 20px; }
   @media all and (max-width: 544px) {
     .top-nav {
-      font-size: 1em;
+      font-size: 0.75em;
       right: 10px;
       top: 12px; } }
   .top-nav a {
@@ -427,11 +548,11 @@ address {
     margin-left: 8px; }
     .top-nav a.club {
       background-attachment: fixed;
-      width: 35px;
-      height: 35px;
+      background: url(../images/icon_club.png) 0 0 no-repeat;
       font: 0/0 a;
       text-indent: -9999px;
-      background: url(../images/icon_club.png) 0 0 no-repeat; }
+      width: 35px;
+      height: 35px; }
     .top-nav a:last-of-type {
       background-position: -92px 0; }
   .top-nav span {
@@ -539,11 +660,11 @@ footer {
 
 .lan-nav {
   color: #656565;
-  font-size: 0.875em; }
+  font-size: 1.125em; }
 
 .top-nav a, .top-nav span {
   color: #656565;
-  font-size: 0.875em; }
+  font-size: 1.125em; }
 
 #banner {
   background: #D7FAFC; }
@@ -563,69 +684,9 @@ h3 {
   background: #72B444;
   padding: 20px 0;
   margin: 0; }
-  .tabs p {
-    color: #656565;
-    font-size: 1.4375em;
-    font-weight: bold;
-    line-height: 1.2; }
-  .tabs a {
-    color: #000;
-    font-size: 1.25em;
-    font-weight: bold;
-    position: absolute;
-    bottom: 20%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%); }
-    .tabs a:hover, .tabs a:active {
-      color: #37BCEE; }
-  .tabs li {
-    display: inline-block;
-    width: 276px;
-    height: 276px;
-    background: rgba(255, 255, 255, 0.7) url(../images/comic/arrow.gif) center 228px no-repeat;
-    border: 4px solid #8A901B;
-    position: relative;
-    vertical-align: middle;
-    padding: 65px 0;
-    margin: .2%; }
-    .tabs li:nth-child(even) {
-      border-color: #405F1B; }
-    .tabs li:first-child h3 {
-      background: url(../images/icon_title2.gif) right 0 no-repeat;
-      padding-right: 10px;
-      margin-right: 30px;
-      margin-top: -20px; }
-      @media all and (max-width: 320px) {
-        .tabs li:first-child h3 {
-          background: none;
-          padding: 0;
-          margin: 0; } }
-    .tabs li:nth-child(2) p {
-      padding-top: 2.5%; }
-    @media all and (max-width: 768px) {
-      .tabs li {
-        max-width: 220px;
-        max-height: 220px;
-        padding-top: 50px; }
-        .tabs li h3 {
-          font-size: 1.375em; }
-        .tabs li p {
-          font-size: 1.125em; }
-        .tabs li a {
-          min-width: 142px; } }
-    @media all and (max-width: 320px) {
-      .tabs li {
-        max-width: 142px;
-        max-height: 142px;
-        padding: 23px 10px; }
-        .tabs li h3 {
-          font-size: 1.0625em; }
-        .tabs li p {
-          font-size: 0.8125em; }
-        .tabs li a {
-          font-size: 0.75em; } }
 
-.tabs-content img {
-  width: 100%; }
+.tabs-content {
+  background: #514A42; }
+  .tabs-content img {
+    width: 100%;
+    max-width: 860px; }

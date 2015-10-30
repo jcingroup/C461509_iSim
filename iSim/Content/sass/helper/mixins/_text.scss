@@ -7,11 +7,13 @@
 }
 
 // 字換圖
-@mixin text-pic($img, $width, $height, $position: 0 0) {
-    @include size($width, $height);
-    @include text-hide;
-
+@mixin text-pic($img, $width, $height, $pic: fixed, $position: 0 0) {
+    @if $pic == fixed {
+        background-attachment: fixed;
+    }
     background: url(#{$img-path}/#{$img}) $position no-repeat;
+    @include text-hide;
+    @include size($width, $height);
 }
 
 // 文字溢位出現省略號,要設寬度

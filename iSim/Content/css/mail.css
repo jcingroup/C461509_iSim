@@ -205,7 +205,7 @@ html, body {
   height: 100%; }
 
 body {
-  background: #FEF8AF;
+  background: #2b5114;
   color: #5C5C5C;
   font-family: "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
   line-height: 1.25; }
@@ -414,11 +414,12 @@ caption {
     cursor: pointer;
     cursor: hand;
     z-index: 50;
-    width: 235px;
-    height: 83px;
+    background-attachment: fixed;
+    background: url(../images/mail/logo.gif) 0 0 no-repeat;
     font: 0/0 a;
     text-indent: -9999px;
-    background: url(../images/logo.png) 0 0 no-repeat;
+    width: 243px;
+    height: 82px;
     position: absolute;
     top: 28px;
     left: 5%; }
@@ -431,13 +432,18 @@ caption {
         height: 70px; } }
 
 .lan-nav {
-  position: absolute;
-  top: 40px;
-  right: 116px;
   font-size: 1.625em;
   color: #fff;
   line-height: 34px;
-  z-index: 51; }
+  z-index: 51;
+  position: absolute;
+  top: 40px;
+  right: 116px; }
+  @media all and (max-width: 544px) {
+    .lan-nav {
+      font-size: 0.875em;
+      right: 100px;
+      top: 15px; } }
 
 .top-nav {
   text-align: right;
@@ -447,7 +453,7 @@ caption {
   right: 20px; }
   @media all and (max-width: 544px) {
     .top-nav {
-      font-size: 1em;
+      font-size: 0.75em;
       right: 10px;
       top: 12px; } }
   .top-nav a {
@@ -456,11 +462,11 @@ caption {
     margin-left: 8px; }
     .top-nav a.club {
       background-attachment: fixed;
-      width: 35px;
-      height: 35px;
+      background: url(../images/icon_club.png) 0 0 no-repeat;
       font: 0/0 a;
       text-indent: -9999px;
-      background: url(../images/icon_club.png) 0 0 no-repeat; }
+      width: 35px;
+      height: 35px; }
     .top-nav a:last-of-type {
       background-position: -92px 0; }
   .top-nav span {

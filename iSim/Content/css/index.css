@@ -205,7 +205,7 @@ html, body {
   height: 100%; }
 
 body {
-  background: #FEF8AF;
+  background: #2b5114;
   color: #5A5B5B;
   font-family: "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
   line-height: 1.25; }
@@ -336,7 +336,7 @@ address {
 .hidden {
   display: none; }
 
-.circle, .bottom a:first-child, .goTop, .intro a, #info li, #get nav a {
+.circle, figure, .bottom a:first-child, .goTop, .intro a, #get nav a {
   border-radius: 50%; }
 
 .text-left {
@@ -393,6 +393,121 @@ address {
 .btn-white {
   color: #fff;
   border-color: #fff; }
+
+figure {
+  position: relative;
+  margin: 0.2%;
+  background: rgba(255, 255, 255, 0.7);
+  text-align: center;
+  cursor: pointer; }
+  figure figcaption {
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; }
+    figure figcaption::before, figure figcaption::after {
+      pointer-events: none; }
+    figure figcaption, figure figcaption > a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
+    figure figcaption > a {
+      z-index: 1000;
+      white-space: nowrap;
+      font-size: 0;
+      opacity: 0; }
+
+figure {
+  display: inline-block;
+  width: 275px;
+  height: 275px;
+  display: inline-block;
+  border: 4px solid #8A901B;
+  vertical-align: middle;
+  padding: 65px 0; }
+  figure:nth-child(even) {
+    border-color: #405F1B; }
+  figure h3 {
+    color: #56901B;
+    font-size: 2em;
+    font-family: MElleHK, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
+    margin-bottom: 5px; }
+  figure p {
+    color: #656565;
+    font-size: 1.4375em;
+    font-weight: bold;
+    line-height: 1.2;
+    position: absolute;
+    top: 46%;
+    right: 0;
+    left: 0; }
+  figure > a {
+    color: #000;
+    font-size: 1.25em;
+    font-weight: bold;
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    figure > a:hover, figure > a:active {
+      color: #37BCEE; }
+  figure:hover a, figure:active a {
+    color: #37BCEE; }
+  figure.item1 {
+    margin-left: -2%; }
+    @media all and (max-width: 768px) {
+      figure.item1 {
+        margin-left: 0; } }
+    figure.item1 h3 {
+      background: url(../images/index/icon_title2.gif) right 0 no-repeat;
+      padding-right: 10px;
+      margin-right: 30px;
+      margin-top: -20px; }
+      @media all and (max-width: 320px) {
+        figure.item1 h3 {
+          background: none;
+          padding: 0;
+          margin: 0; } }
+  figure.item2 p {
+    padding-top: 2%; }
+  figure:last-child::after {
+    content: '';
+    display: block;
+    background: url(../images/index/info_pic.png) 0 0 no-repeat;
+    width: 109px;
+    height: 230px;
+    position: absolute;
+    right: -80px;
+    bottom: 0; }
+    @media all and (max-width: 768px) {
+      figure:last-child::after {
+        display: none; } }
+  @media all and (max-width: 768px) {
+    figure {
+      max-width: 220px;
+      max-height: 220px;
+      padding-top: 50px; }
+      figure h3 {
+        font-size: 1.375em; }
+      figure p {
+        font-size: 1.125em; }
+      figure a {
+        min-width: 142px;
+        text-decoration: underline; } }
+  @media all and (max-width: 320px) {
+    figure {
+      max-width: 142px;
+      max-height: 142px;
+      padding: 23px 10px; }
+      figure h3 {
+        font-size: 1.0625em; }
+      figure p {
+        font-size: 0.8125em; }
+      figure a {
+        font-size: 0.75em; } }
 
 .row {
   margin-bottom: 15px; }
@@ -805,11 +920,12 @@ address {
     cursor: pointer;
     cursor: hand;
     z-index: 50;
-    width: 235px;
-    height: 83px;
+    background-attachment: fixed;
+    background: url(../images/logo.png) 0 0 no-repeat;
     font: 0/0 a;
     text-indent: -9999px;
-    background: url(../images/logo.png) 0 0 no-repeat;
+    width: 235px;
+    height: 83px;
     position: absolute;
     top: 28px;
     left: 5%; }
@@ -822,13 +938,18 @@ address {
         height: 70px; } }
 
 .lan-nav {
-  position: absolute;
-  top: 40px;
-  right: 116px;
   font-size: 1.625em;
   color: #fff;
   line-height: 34px;
-  z-index: 51; }
+  z-index: 51;
+  position: absolute;
+  top: 40px;
+  right: 116px; }
+  @media all and (max-width: 544px) {
+    .lan-nav {
+      font-size: 0.875em;
+      right: 100px;
+      top: 15px; } }
 
 .top-nav {
   text-align: right;
@@ -838,7 +959,7 @@ address {
   right: 20px; }
   @media all and (max-width: 544px) {
     .top-nav {
-      font-size: 1em;
+      font-size: 0.75em;
       right: 10px;
       top: 12px; } }
   .top-nav a {
@@ -847,11 +968,11 @@ address {
     margin-left: 8px; }
     .top-nav a.club {
       background-attachment: fixed;
-      width: 35px;
-      height: 35px;
+      background: url(../images/icon_club.png) 0 0 no-repeat;
       font: 0/0 a;
       text-indent: -9999px;
-      background: url(../images/icon_club.png) 0 0 no-repeat; }
+      width: 35px;
+      height: 35px; }
     .top-nav a:last-of-type {
       background-position: -92px 0; }
   .top-nav span {
@@ -961,6 +1082,7 @@ body {
   overflow-x: hidden; }
 
 #banner {
+  position: relative;
   background: #2B5114;
   min-height: 320px; }
   @media all and (max-width: 768px) {
@@ -987,7 +1109,7 @@ body {
     @media all and (min-width: 1400px) {
       #banner .btn {
         margin-top: 6%;
-        margin-left: 25%; } }
+        margin-left: 24%; } }
     @media all and (max-width: 544px) {
       #banner .btn {
         width: auto;
@@ -1004,11 +1126,14 @@ section {
   padding-bottom: 32px; }
   section header {
     font-size: 3.9375em; }
+    @media all and (max-width: 768px) {
+      section header {
+        font-size: 3.125em; } }
     section header i {
       font-style: normal; }
   @media all and (max-width: 768px) {
     section img {
-      width: 90%;
+      max-width: 90%;
       margin: auto; } }
 
 .wrap {
@@ -1045,7 +1170,7 @@ section {
     vertical-align: middle;
     position: relative;
     margin: 1% 6%;
-    margin-left: -0.5%;
+    margin-left: -2%;
     padding: 45px 38px; }
     .intro a::after {
       content: '';
@@ -1121,7 +1246,8 @@ section {
     background: url(../images/index/productBg.gif) center 0 no-repeat;
     color: #fff;
     font-size: 1.5em;
-    padding-top: 50px; }
+    padding-top: 75px;
+    padding-bottom: 10px; }
     .products header h2 {
       font-size: 2.29167em;
       margin: 0 0 10px; }
@@ -1158,15 +1284,18 @@ section {
       left: 0; }
     .products h4::after {
       right: 0; }
-  @media all and (min-width: 959px) and (max-width: 1279px) {
-    .products img {
-      max-width: 48%;
-      -webkit-transform: translateY(30%);
-      -o-transform: translateY(30%);
-      transform: translateY(30%); } }
-  @media all and (max-width: 768px) {
-    .products img {
-      float: none; } }
+  .products img {
+    margin-top: 30px; }
+    @media all and (min-width: 959px) and (max-width: 1279px) {
+      .products img {
+        max-width: 48%;
+        -webkit-transform: translateY(30%);
+        -o-transform: translateY(30%);
+        transform: translateY(30%); } }
+    @media all and (max-width: 768px) {
+      .products img {
+        float: none;
+        margin: 30px auto; } }
   .products li {
     background-attachment: fixed;
     background: url(../images/index/icon.gif) 0 7px no-repeat;
@@ -1181,8 +1310,7 @@ section {
     .products li:nth-of-type(3) {
       background-position: 0 -180px; }
   .products article {
-    color: #5B5C5C;
-    padding-top: 15px; }
+    color: #5B5C5C; }
     .products article h2 {
       background: url(../images/index/titleBg.png) 0 center no-repeat;
       font-size: 2.9375em;
@@ -1192,30 +1320,20 @@ section {
         .products article h2 {
           font-size: 1.875em; } }
   .products .p1 {
-    padding-top: 100px;
-    padding-bottom: 60px; }
+    padding-top: 90px;
+    padding-bottom: 85px; }
     .products .p1::before {
       background-image: url(../images/index/productBg3.gif);
       top: -15px;
       height: 101px; }
-    @media all and (max-width: 768px) {
-      .products .p1 {
-        padding-bottom: 0; } }
-    .products .p1 div {
-      margin-top: -25px; }
-      @media all and (min-width: 1400px) {
-        .products .p1 div {
-          width: 44%; } }
+    @media all and (min-width: 1400px) {
+      .products .p1 div {
+        width: 44%; } }
     .products .p1 img {
-      vertical-align: middle;
       margin-left: 2%; }
       @media all and (min-width: 1400px) {
         .products .p1 img {
           margin-left: 12%; } }
-      @media all and (max-width: 768px) {
-        .products .p1 img {
-          margin: auto;
-          margin-top: 15px; } }
     .products .p1 h2 {
       padding-left: 50px; }
     .products .p1 h3, .products .p1 h4, .products .p1 ol, .products .p1 p {
@@ -1232,7 +1350,9 @@ section {
         margin-right: 15px; } }
   .products .p2 {
     background: #C6D829;
-    color: #3E3E3E; }
+    color: #3E3E3E;
+    padding-top: 15px;
+    padding-bottom: 120px; }
     .products .p2::before {
       background-image: url(../images/index/productBg2.gif);
       top: -78px;
@@ -1242,43 +1362,37 @@ section {
       @media all and (max-width: 768px) {
         .products .p2 div {
           width: 100%; } }
+    .products .p2 h2, .products .p2 h3 {
+      display: inline-block; }
     .products .p2 h2 {
       background-attachment: fixed;
       background: url(../images/index/titleBg2.png) right center no-repeat;
       padding-left: 7%;
-      padding-right: 45px; }
+      padding-right: 65px; }
       @media all and (min-width: 1400px) {
         .products .p2 h2 {
           padding-left: 105px; } }
     .products .p2 h3 {
       background: url(../images/index/icon_title.gif) right 0 no-repeat;
-      line-height: 1.3;
-      display: inline-block;
-      padding-right: 65px; }
+      padding: 7px 65px 7px 0; }
     .products .p2 li {
       background-image: url(../images/index/icon2.gif); }
       .products .p2 li:nth-of-type(2) {
         background-position: 0 -86px; }
       .products .p2 li:nth-of-type(3) {
         background-position: 0 -185px; }
-    .products .p2 h3, .products .p2 h4, .products .p2 ol {
+    .products .p2 h3, .products .p2 h4, .products .p2 ol, .products .p2 .btn {
       margin-left: 7%; }
       @media all and (min-width: 1400px) {
-        .products .p2 h3, .products .p2 h4, .products .p2 ol {
+        .products .p2 h3, .products .p2 h4, .products .p2 ol, .products .p2 .btn {
           margin-left: 105px; } }
       @media all and (max-width: 768px) {
-        .products .p2 h3, .products .p2 h4, .products .p2 ol {
+        .products .p2 h3, .products .p2 h4, .products .p2 ol, .products .p2 .btn {
           margin-right: 15px; } }
-    @media all and (min-width: 959px) and (max-width: 1279px) {
-      .products .p2 img {
-        max-width: 352px;
-        margin-right: 0; } }
-    .products .p2 .btn {
-      float: right;
-      margin-top: -55px; }
-      @media all and (max-width: 768px) {
-        .products .p2 .btn {
-          margin-top: 0; } }
+
+@media all and (max-width: 768px) {
+  #info, #get, #faq {
+    padding: 0 15px; } }
 
 #info {
   background: url(../images/index/infoBg.gif) 0 0 repeat;
@@ -1292,90 +1406,6 @@ section {
     text-align: left;
     margin-top: -15px;
     margin-bottom: 15px; }
-  #info h3 {
-    color: #56901B;
-    font-size: 2em;
-    font-family: MElleHK, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
-    margin-bottom: 5px; }
-  #info p {
-    color: #656565;
-    font-size: 1.4375em;
-    font-weight: bold;
-    line-height: 1.2; }
-  #info a {
-    color: #000;
-    font-size: 1.25em;
-    font-weight: bold;
-    position: absolute;
-    bottom: 18%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%); }
-    #info a:hover, #info a:active {
-      color: #37BCEE; }
-  #info li {
-    display: inline-block;
-    width: 275px;
-    height: 275px;
-    background: rgba(255, 255, 255, 0.7);
-    border: 4px solid #8A901B;
-    position: relative;
-    vertical-align: middle;
-    padding: 65px 0;
-    margin: .2%; }
-    #info li:nth-child(even) {
-      border-color: #405F1B; }
-    #info li:first-child h3 {
-      background: url(../images/icon_title2.gif) right 0 no-repeat;
-      padding-right: 10px;
-      margin-right: 30px;
-      margin-top: -20px; }
-      @media all and (max-width: 320px) {
-        #info li:first-child h3 {
-          background: none;
-          padding: 0;
-          margin: 0; } }
-    #info li:nth-child(2) p {
-      padding-top: 2%; }
-    @media all and (max-width: 768px) {
-      #info li {
-        max-width: 220px;
-        max-height: 220px;
-        padding-top: 50px; }
-        #info li h3 {
-          font-size: 1.375em; }
-        #info li p {
-          font-size: 1.125em; }
-        #info li a {
-          min-width: 142px; } }
-    @media all and (max-width: 320px) {
-      #info li {
-        max-width: 142px;
-        max-height: 142px;
-        padding: 23px 10px; }
-        #info li h3 {
-          font-size: 1.0625em; }
-        #info li p {
-          font-size: 0.8125em; }
-        #info li a {
-          font-size: 0.75em; } }
-  #info ul {
-    left: -2%;
-    position: relative; }
-    #info ul::after {
-      content: '';
-      display: block;
-      background: url(../images/index/info_pic.png) 0 0 no-repeat;
-      width: 109px;
-      height: 230px;
-      position: absolute;
-      right: -35px;
-      bottom: 0; }
-      @media all and (max-width: 768px) {
-        #info ul::after {
-          display: none;
-          left: 0; } }
 
 #get {
   background: url(../images/index/getBg.gif) 0 0 repeat;
@@ -1413,7 +1443,8 @@ section {
   #get p {
     color: #3E3E3E;
     font-size: 28px;
-    font-weight: bold; }
+    font-weight: bold;
+    margin: 15px 0; }
   @media all and (max-width: 768px) {
     #get img {
       max-width: 80px; } }
@@ -1491,3 +1522,7 @@ section {
   #faq .btn {
     vertical-align: bottom;
     margin-left: -110px; }
+    @media all and (max-width: 544px) {
+      #faq .btn {
+        margin-left: -20px;
+        margin-top: 20px; } }
