@@ -207,7 +207,7 @@ html, body {
 body {
   background: #FEF8AF;
   color: #5A5B5B;
-  font-family: "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, NeutrafaceDemi, Helvetica, Arial, sans-serif;
+  font-family: "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
   line-height: 1.25; }
 
 a {
@@ -303,7 +303,7 @@ address {
   font-style: normal;
   line-height: 1.25; }
 
-.row::after, #header::after, #footer::after, #main::after, section::after, .wrap::after, .products article::after, .clearfix::after {
+.row::after, #header::after, footer::after, #main::after, section::after, .wrap::after, .products article::after, .clearfix::after {
   content: '';
   display: table;
   clear: both; }
@@ -780,15 +780,15 @@ address {
     margin-left: 100%; } }
 /*      layout
 -----------------------------------------------------------------------*/
-#wrapper, .wrap, #header, #footer, #main, section {
+#wrapper, .wrap, #header, footer, #main, section {
   position: relative; }
 
-#wrapper, .wrap, #footer {
+#wrapper, .wrap, footer {
   max-width: 1440px;
   margin: 0 auto; }
 
 @media all and (min-width: 992px) {
-  #header, #footer, #main, section {
+  #header, footer, #main, section {
     min-width: 1008px; } }
 
 #wrapper {
@@ -821,8 +821,16 @@ address {
         width: 150px;
         height: 70px; } }
 
+.lan-nav {
+  position: absolute;
+  top: 40px;
+  right: 116px;
+  font-size: 1.625em;
+  color: #fff;
+  line-height: 34px;
+  z-index: 51; }
+
 .top-nav {
-  font-size: 1.75em;
   text-align: right;
   z-index: 49;
   position: absolute;
@@ -836,9 +844,7 @@ address {
   .top-nav a {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 8px;
-    color: #fff;
-    line-height: 34px; }
+    margin-left: 8px; }
     .top-nav a.club {
       background-attachment: fixed;
       width: 35px;
@@ -852,10 +858,10 @@ address {
     display: block;
     clear: both;
     color: #fff;
-    font-size: 0.71429em;
+    font-size: 1.25em;
     margin-top: 8px; }
 
-#footer {
+footer {
   background: #656565;
   margin-top: -50px;
   height: 50px;
@@ -863,7 +869,7 @@ address {
   color: #fff;
   padding: 15px; }
   @media all and (max-width: 768px) {
-    #footer {
+    footer {
       margin-top: -100px;
       height: 100px; } }
 
@@ -992,7 +998,7 @@ body {
 
 section header, article h2 {
   color: #6DB831;
-  font-family: MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif; }
+  font-family: MElleHK, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif; }
 
 section {
   padding-bottom: 32px; }
@@ -1034,7 +1040,7 @@ section {
     border: 5px solid #fff;
     color: #fff;
     font-size: 2.3125em;
-    font-family: MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
+    font-family: MElleHK, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
     text-align: left;
     vertical-align: middle;
     position: relative;
@@ -1120,18 +1126,17 @@ section {
       font-size: 2.29167em;
       margin: 0 0 10px; }
     .products header p {
-      font-family: "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, NeutrafaceDemi, Helvetica, Arial, sans-serif;
-      text-align: left;
-      margin: auto; }
+      font-family: "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif; }
       @media all and (max-width: 768px) {
         .products header p {
+          text-align: left;
           margin: 0 15px; } }
   .products div {
     text-align: left; }
   .products h3 {
     color: #fff;
     font-size: 2.8125em;
-    font-family: MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif; }
+    font-family: MElleHK, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif; }
   .products h4 {
     font-size: 2.125em;
     font-weight: bold;
@@ -1290,7 +1295,7 @@ section {
   #info h3 {
     color: #56901B;
     font-size: 2em;
-    font-family: MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
+    font-family: MElleHK, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
     margin-bottom: 5px; }
   #info p {
     color: #656565;
@@ -1447,7 +1452,7 @@ section {
   #ad a {
     border: 4px solid;
     border-radius: 40px;
-    font: bold 3.125em MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
+    font: bold 3.125em MElleHK, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
     display: inline-block;
     padding: 10px;
     margin: 35px 4% 0;

@@ -68,7 +68,7 @@ $goTop:                 (bottom 10px), (right 15px) !default;
     // @extend .text-left;
 }
 
-#header, #footer, #main, section {
+#header, footer, #main, section {
     @extend %container;
     @extend %contain;
 }
@@ -94,8 +94,14 @@ $goTop:                 (bottom 10px), (right 15px) !default;
     }
 }
 
+.lan-nav {
+    @include absolute(right 116px top 40px);
+    font-size: em(26px);
+    color: #fff;
+    line-height: 34px;
+    z-index: z(logo)+1;
+}
 .top-nav {
-    font-size: em(28px);
     text-align: right;
     z-index: z(logo)-1;
 
@@ -109,9 +115,6 @@ $goTop:                 (bottom 10px), (right 15px) !default;
         display: inline-block;
         vertical-align: middle;
         margin-left: 8px;
-
-        color: #fff;
-        line-height: 34px;
 
         &.club {
             background-attachment: fixed;
@@ -131,7 +134,7 @@ $goTop:                 (bottom 10px), (right 15px) !default;
         display: block;
         clear: both;
         color: #fff;
-        font-size: em(20px,28px);
+        font-size: em(20px);
         margin-top: 8px;
     }
 }
@@ -139,7 +142,7 @@ $goTop:                 (bottom 10px), (right 15px) !default;
 
 // footer
 // ----------------------------------------------------------------------
-#footer {
+footer {
     @extend %center;
     background: $footer-bg;
     margin-top: -($footer-height);

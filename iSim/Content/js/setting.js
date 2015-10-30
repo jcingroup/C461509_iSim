@@ -35,3 +35,7 @@ $.get("_include/header.html",function(data) {
 $.get("_include/footer.html",function(data) {
     $("#footer").html(data);
 });
+
+$.get("_include/footer-cn.html",function(data) {
+    $("#footer2").html(data);
+});

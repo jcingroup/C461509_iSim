@@ -24,6 +24,7 @@ $content-spacing:       0;
 //     background-image: url(#{$img-path}/mail/logo.gif);
 //     @include size(238px,86px);
 // }
+.lan-nav { color: #656565; font-size: em(14px); }
 .top-nav {
     a, span { color: #656565; font-size: em(14px); }
 }

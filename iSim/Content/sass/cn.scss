@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+// import
+// ------------------------------------------------------------
+@import "helper/function";
+@import "helper/var";
+
+section header,
+article h2,
+.intro a,
+.products h3,
+#info h3,
+#ad a,
+main header,
+h3 {
+    font-family: $font-family-base;
+    font-weight: bold;
+}

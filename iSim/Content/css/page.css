@@ -207,7 +207,7 @@ html, body {
 body {
   background: #FEF8AF;
   color: #5C5C5C;
-  font-family: "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, NeutrafaceDemi, Helvetica, Arial, sans-serif;
+  font-family: "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
   line-height: 1.25; }
 
 a {
@@ -398,7 +398,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
 .disabled {
   cursor: not-allowed; }
 
-.row::after, #header::after, #footer::after, #main::after, section::after, .wrap::after, .clearfix::after {
+.row::after, #header::after, footer::after, #main::after, section::after, .wrap::after, .clearfix::after {
   content: '';
   display: table;
   clear: both; }
@@ -875,15 +875,15 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     margin-left: 100%; } }
 /*      layout
 -----------------------------------------------------------------------*/
-#wrapper, .wrap, #header, #footer, #main, section {
+#wrapper, .wrap, #header, footer, #main, section {
   position: relative; }
 
-#wrapper, .wrap, #footer {
+#wrapper, .wrap, footer {
   max-width: 1440px;
   margin: 0 auto; }
 
 @media all and (min-width: 992px) {
-  #header, #footer, #main, section {
+  #header, footer, #main, section {
     min-width: 1008px; } }
 
 #wrapper {
@@ -916,8 +916,16 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
         width: 150px;
         height: 70px; } }
 
+.lan-nav {
+  position: absolute;
+  top: 40px;
+  right: 116px;
+  font-size: 1.625em;
+  color: #fff;
+  line-height: 34px;
+  z-index: 51; }
+
 .top-nav {
-  font-size: 1.75em;
   text-align: right;
   z-index: 49;
   position: absolute;
@@ -931,9 +939,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   .top-nav a {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 8px;
-    color: #fff;
-    line-height: 34px; }
+    margin-left: 8px; }
     .top-nav a.club {
       background-attachment: fixed;
       width: 35px;
@@ -947,10 +953,10 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
     display: block;
     clear: both;
     color: #fff;
-    font-size: 0.71429em;
+    font-size: 1.25em;
     margin-top: 8px; }
 
-#footer {
+footer {
   background: #656565;
   margin-top: -50px;
   height: 50px;
@@ -958,7 +964,7 @@ input[type="text"], input[type="password"], input[type="date"], input[type="date
   color: #fff;
   padding: 15px; }
   @media all and (max-width: 768px) {
-    #footer {
+    footer {
       margin-top: -100px;
       height: 100px; } }
 
@@ -1087,5 +1093,5 @@ button {
 
 main header {
   font-size: 62px;
-  font-family: MElleHK, NeutrafaceDemi, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Arial, sans-serif;
+  font-family: MElleHK, "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
   line-height: 99px; }
