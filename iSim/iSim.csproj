@@ -128,9 +128,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="ad.html" />
+    <Content Include="ad.zh-CN.html" />
     <Content Include="ad2.html" />
+    <Content Include="ad2.zh-CN.html" />
     <Content Include="comic.html" />
+    <Content Include="comic.zh-CN.html" />
     <Content Include="Content\css\ad.css" />
+    <Content Include="Content\css\cn.css" />
     <Content Include="Content\css\comic.css" />
     <Content Include="Content\css\index.css" />
     <Content Include="Content\css\mail.css" />
@@ -184,6 +188,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="index.html" />
+    <Content Include="index.zh-CN.html" />
     <Content Include="mail.html" />
     <Content Include="Content\sass\ad.scss" />
     <Content Include="Content\sass\base\basic\_normalize.scss" />
@@ -225,6 +230,7 @@
     <Content Include="Content\font\MElleHK.woff" />
     <Content Include="Content\font\Neutraface2Text-Demi.otf" />
     <Content Include="Content\font\NeutrafaceDemi.otf" />
+    <Content Include="mail.zh-CN.html" />
     <Content Include="Scripts\GoogleAnalytics.js" />
     <Content Include="Scripts\w_comminc.js" />
     <Content Include="Scripts\_references.js" />
@@ -240,6 +246,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="_include\footer-cn.html" />
     <Content Include="_include\footer.html" />
     <Content Include="_include\header.html" />
   </ItemGroup>
@@ -253,6 +260,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <Content Include="Content\sass\comic.scss" />
+    <Content Include="Content\images\aa\Thumbs.db" />
+    <Content Include="Content\images\comic\Thumbs.db" />
+    <Content Include="Content\images\index\Thumbs.db" />
+    <Content Include="Content\images\Thumbs.db" />
+    <Content Include="Content\sass\cn.scss" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Home\Email.cshtml" />
   </ItemGroup>
