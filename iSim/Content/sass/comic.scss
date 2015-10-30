@@ -28,7 +28,11 @@ $content-spacing:       0;
     a, span { color: #656565; font-size: em(14px); }
 }
 #banner {
-    img { width: 100%; }
+    background: #D7FAFC;
+    img {
+        width: 100%;
+        @include media(sm) { margin-top: 100px; }
+    }
 }
 
 h3 {
@@ -46,8 +50,6 @@ h3 {
         font-size: em(23px);
         font-weight: bold;
         line-height: 1.2;
-        margin-top: -35px;
-        @extend %text-middle;
     }
     a {
         color: #000;
@@ -69,27 +71,27 @@ h3 {
         margin: .2%;
 
         &:nth-child(even) { border-color: #405F1B; }
-        &:first-child {
-            h3 {
-                background: url(#{$img-path}/index/icon_title2.gif) right 0 no-repeat;
-                padding-right: 10px;
-                margin-right: 30px;
-                margin-top: -20px;
-                @include media(xss) { background: none; padding: 0; margin: 0; }
-            }
+        &:first-child h3 {
+            background: url(#{$img-path}/icon_title2.gif) right 0 no-repeat;
+            padding-right: 10px;
+            margin-right: 30px;
+            margin-top: -20px;
+            @include media(xss) { background: none; padding: 0; margin: 0; }
         }
+        &:nth-child(2) p { padding-top: 2.5% }
         @include media(sm) {
             max-width: 220px; max-height: 220px;
             padding-top: 50px;
             h3 { font-size: em(22px); }
-            p { font-size: em(18px); margin-top: -15px; }
+            p { font-size: em(18px);}
+            a { min-width: 142px; }
         }
         @include media(xss) {
             max-width: 142px; max-height: 142px;
             padding: 23px 10px;
             h3 { font-size: em(17px); }
-            p { font-size: em(13px); margin-top: -25px; }
-            a { font-size: em(12px); min-width: 142px; }
+            p { font-size: em(13px); }
+            a { font-size: em(12px); }
         }
     }
 }

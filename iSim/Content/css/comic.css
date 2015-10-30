@@ -348,13 +348,6 @@ address {
 .text-center, .bottom a:first-child, .goTop {
   text-align: center; }
 
-.tabs p {
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
-  transform: translateY(-50%); }
-
 .list-inline, .list-unstyled {
   list-style: none; }
 
@@ -542,8 +535,13 @@ address {
   color: #656565;
   font-size: 0.875em; }
 
-#banner img {
-  width: 100%; }
+#banner {
+  background: #D7FAFC; }
+  #banner img {
+    width: 100%; }
+    @media all and (max-width: 768px) {
+      #banner img {
+        margin-top: 100px; } }
 
 h3 {
   color: #56901B;
@@ -559,8 +557,7 @@ h3 {
     color: #656565;
     font-size: 1.4375em;
     font-weight: bold;
-    line-height: 1.2;
-    margin-top: -35px; }
+    line-height: 1.2; }
   .tabs a {
     color: #000;
     font-size: 1.25em;
@@ -586,7 +583,7 @@ h3 {
     .tabs li:nth-child(even) {
       border-color: #405F1B; }
     .tabs li:first-child h3 {
-      background: url(../images/index/icon_title2.gif) right 0 no-repeat;
+      background: url(../images/icon_title2.gif) right 0 no-repeat;
       padding-right: 10px;
       margin-right: 30px;
       margin-top: -20px; }
@@ -595,6 +592,8 @@ h3 {
           background: none;
           padding: 0;
           margin: 0; } }
+    .tabs li:nth-child(2) p {
+      padding-top: 2.5%; }
     @media all and (max-width: 768px) {
       .tabs li {
         max-width: 220px;
@@ -603,8 +602,9 @@ h3 {
         .tabs li h3 {
           font-size: 1.375em; }
         .tabs li p {
-          font-size: 1.125em;
-          margin-top: -15px; } }
+          font-size: 1.125em; }
+        .tabs li a {
+          min-width: 142px; } }
     @media all and (max-width: 320px) {
       .tabs li {
         max-width: 142px;
@@ -613,11 +613,9 @@ h3 {
         .tabs li h3 {
           font-size: 1.0625em; }
         .tabs li p {
-          font-size: 0.8125em;
-          margin-top: -25px; }
+          font-size: 0.8125em; }
         .tabs li a {
-          font-size: 0.75em;
-          min-width: 142px; } }
+          font-size: 0.75em; } }
 
 .tabs-content img {
   width: 100%; }
