@@ -4,6 +4,7 @@
 // ------------------------------------------------------------
 @import "helper/function";
 @import "helper/var";
+@import "helper/mixins";
 
 section header,
 article h2,
@@ -17,10 +18,16 @@ figure h3 {
     font-weight: bold;
 }
 
-.ad ,
-.ad2 {
-	#banner strong {
-		background-image: url(#{$img-path}/aa/title_cn.png);
-		height: 91px;
-	}
+#banner {
+    .ad &, .ad2 & {
+        strong {
+    		background-image: url(#{$img-path}/aa/title_cn.png);
+    		height: 91px;
+        }
+    }
+    .index & {
+        @include media(sm) {
+            background-image: url(#{$img-path}/index/banner-480-cn.jpg);
+        }
+    }
 }

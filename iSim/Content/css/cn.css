@@ -9,7 +9,9 @@ figure h3 {
   font-family: "Microsoft Jhenghei", \5FAE\8EDF\6B63\9ED1\9AD4, Helvetica, Arial, sans-serif;
   font-weight: bold; }
 
-.ad #banner strong,
-.ad2 #banner strong {
+.ad #banner strong, .ad2 #banner strong {
   background-image: url(../images/aa/title_cn.png);
   height: 91px; }
+@media all and (max-width: 768px) {
+  .index #banner {
+    background-image: url(../images/index/banner-480-cn.jpg); } }

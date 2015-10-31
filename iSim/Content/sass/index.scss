@@ -15,9 +15,9 @@ $md-pc:                 '(min-width: 959px) and (max-width: 1279px)';
 
 @import "base/basic";
 
+@import "component/figure";
 @import "component/classes";
 @import "component/btn";
-@import "component/figure";
 
 @import "layout/grid";
 @import "layout/layout";
@@ -30,13 +30,10 @@ body { overflow-x: hidden; }
 #banner {
     position: relative;
     background: #2B5114;
-    min-height: 320px;
+    min-height: 420px;
     @include media(sm) {
-        background: #2B5114 url(#{$img-path2}/banner-480.jpg) center bottom no-repeat;
+        background: #2B5114 url(#{$img-path2}/banner-480.jpg) center 80px no-repeat;
         background-size: contain;
-    }
-    @include media('(max-width: 320px)') {
-        min-height: 280px;
     }
     img {
         width: 100%;
@@ -57,6 +54,7 @@ body { overflow-x: hidden; }
         @include media(xs) {
             width: auto;
             left: 20%; right: 20%;
+            bottom: 3%; top: auto;
             margin-left: 0;
             margin-top: cp(310px);
         }
@@ -68,7 +66,7 @@ section header, article h2 {
     font-family: $font-sp;
 }
 section {
-    padding-bottom: 32px;
+    // padding-bottom: 32px;
 
     header {
         font-size: em(63px);
@@ -83,7 +81,8 @@ section {
 .wrap { max-width: 1230px; }
 
 .bg-bevel {
-    padding-bottom: 80px;
+    @extend %clearfix;
+    padding-bottom: 100px;
     position: relative;
     &::before {
         content: '';
@@ -99,6 +98,7 @@ section {
 .intro {
     margin-top: 0;
     padding-top: 50px;
+    overflow: hidden;
     z-index: z(main);
 
     a {
@@ -169,7 +169,6 @@ section {
     }
 }
 .products {
-    padding-bottom: 0;
     header {
         position: relative;
         z-index: 12;
@@ -190,9 +189,14 @@ section {
     }
     div { text-align: left; }
     h3 {
+        background: url(#{$img-path2}/icon_title.gif) right 0 no-repeat;
         color: #fff;
         font-size: em(45px);
         font-family: $font-sp;
+        padding: 7px 60px 7px 0;
+        @include media(xs) {
+            font-size: em(32px);
+        }
     }
     h4 {
         font-size: em(34px);
@@ -220,7 +224,7 @@ section {
             max-width: 48%;
             @include prefix(transform,translateY(30%))
         }
-        @include media(sm) { float: none; margin: 30px auto; }
+        @include media(sm) { float: none; margin: 30px auto 0 auto; }
     }
     li {
         background-attachment: fixed;
@@ -237,7 +241,6 @@ section {
         &:nth-of-type(3) { background-position: 0 -180px; }
     }
     article {
-        @extend %clearfix;
         color: #5B5C5C;
 
         h2 {
@@ -250,7 +253,7 @@ section {
     }
     .p1 {
         padding-top: 90px;
-        padding-bottom: 85px;
+        padding-bottom: 100px;
         &::before {
             background-image: url(#{$img-path2}/productBg3.gif);
             top: -15px; height: 101px;
@@ -263,13 +266,13 @@ section {
             @include media(xl) { margin-left: cp(160px); }
         }
         h2 { padding-left: 50px; }
-        h3, h4, ol, p {
+        h4, ol, p {
             margin-left: 50px;
             margin-right: cp(100px);
             @include media(xl) { margin-right: 170px; }
         }
         .btn { margin-left: 50px; }
-        h3, h4, ol, p, .btn {
+        h4, ol, p, .btn {
             @include media(sm) { margin-left: $gutter; margin-right: $gutter; }
         }
     }
@@ -277,7 +280,6 @@ section {
         background: #C6D829;
         color: #3E3E3E;
         padding-top: 15px;
-        padding-bottom: 120px;
         &::before {
             background-image: url(#{$img-path2}/productBg2.gif);
             top: -78px; height: 78px;
@@ -294,10 +296,6 @@ section {
             padding-right: 65px;
             @include media(xl) { padding-left: 105px; }
         }
-        h3 {
-            background: url(#{$img-path2}/icon_title.gif) right 0 no-repeat;
-            padding: 7px 65px 7px 0;
-        }
         li {
             background-image: url(#{$img-path2}/icon2.gif);
             &:nth-of-type(2) { background-position: 0 -86px; }
@@ -312,7 +310,10 @@ section {
 }
 
 #info, #get, #faq {
-    @include media(sm) { padding: 0 $gutter; }
+    @include media(sm) {
+        padding-left: $gutter;
+        padding-right: $gutter;
+    }
 }
 
 #info {
@@ -364,32 +365,46 @@ section {
         font-size: 28px;
         font-weight: bold;
         margin: 15px 0;
+        @include media(sm) { display: inline; }
     }
     img {
         @include media(sm) { max-width: 80px; }
     }
     nav {
         margin-left: -1.5%;
+        margin-top: 1.5%;
+        em {
+            font-style: normal;
+            display: inline-block;
+            vertical-align: middle;
+        }
         a {
             @include circle(167px, no);
-            background: #32A7D4;
+            background: #95C645;
             color: #fff;
-            font-size: em(38px);
+            font-size: em(29px);
             font-weight: bold;
             text-align: center;
             vertical-align: middle;
-            padding-top: 5%;
             margin: 1.2%;
-            &:nth-child(2) {
-                background: #95C645;
-                font-size: em(29px);
-                padding-top: 3.5%;
+            &::before {
+                content: "";
+                display: inline-block;
+                height: 100%;
+                vertical-align:middle;
+            }
+            &:nth-child(odd) {
+                background: #32A7D4;
+                font-size: em(38px,16px);
+                em { width: 60%; }
             }
             &:hover, &:active { background: #065F81; }
         }
-        @include media(sm) {
-            a, a:nth-child(2) {
-                padding-top: 10%;
+        @include media(xs) {
+            text-align: center;
+            a {
+                float: none; display: block;
+                margin: 2% auto;
             }
         }
     }

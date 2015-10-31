@@ -70,7 +70,7 @@ $goTop:                 (bottom 10px), (right 15px) !default;
     // @extend .text-left;
 }
 
-#header, footer, #main, section {
+#header, footer, main, section {
     @extend %container;
     @extend %contain;
 }
