@@ -176,7 +176,6 @@
     <Content Include="Content\images\index\productBg3.gif" />
     <Content Include="Content\images\index\titleBg.png" />
     <Content Include="Content\images\index\titleBg2.png" />
-    <Content Include="Content\images\logo.gif" />
     <Content Include="Content\images\logo.png" />
     <Content Include="Content\images\mail\banner.gif" />
     <Content Include="Content\images\mail\logo.gif" />
@@ -260,10 +259,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="packages.config" />
     <Content Include="Content\sass\comic.scss" />
-    <Content Include="Content\images\aa\Thumbs.db" />
-    <Content Include="Content\images\comic\Thumbs.db" />
-    <Content Include="Content\images\index\Thumbs.db" />
-    <Content Include="Content\images\Thumbs.db" />
     <Content Include="Content\sass\cn.scss" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Home\Email.cshtml" />
