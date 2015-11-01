@@ -138,11 +138,16 @@
     <Content Include="Content\css\comic.css" />
     <Content Include="Content\css\index.css" />
     <Content Include="Content\css\mail.css" />
+    <Content Include="Content\css\page.css" />
     <Content Include="Content\images\aa\banner.png" />
+    <Content Include="Content\images\aa\banner2.png" />
+    <Content Include="Content\images\aa\logo.gif" />
     <Content Include="Content\images\aa\title.gif" />
     <Content Include="Content\images\aa\title.jpg" />
+    <Content Include="Content\images\aa\title.png" />
     <Content Include="Content\images\aa\title1.gif" />
     <Content Include="Content\images\aa\titleBg.gif" />
+    <Content Include="Content\images\aa\title_cn.png" />
     <Content Include="Content\images\comic\arrow.gif" />
     <Content Include="Content\images\comic\banner.jpg" />
     <Content Include="Content\images\comic\p1.jpg" />
@@ -150,12 +155,16 @@
     <Content Include="Content\images\comic\p3.jpg" />
     <Content Include="Content\images\comic\p4.jpg" />
     <Content Include="Content\images\icon_club.png" />
+    <Content Include="Content\images\icon_title2.gif" />
     <Content Include="Content\images\index\adBg.gif" />
     <Content Include="Content\images\index\adBg.jpg" />
     <Content Include="Content\images\index\adBg2.gif" />
+    <Content Include="Content\images\index\banner-480-cn.jpg" />
     <Content Include="Content\images\index\banner-480.jpg" />
+    <Content Include="Content\images\index\banner-cn.jpg" />
     <Content Include="Content\images\index\banner.jpg" />
     <Content Include="Content\images\index\faqBg.gif" />
+    <Content Include="Content\images\index\faq_pic-cn.gif" />
     <Content Include="Content\images\index\faq_pic.gif" />
     <Content Include="Content\images\index\getBg.gif" />
     <Content Include="Content\images\index\getBg2.gif" />
@@ -169,6 +178,7 @@
     <Content Include="Content\images\index\infoBg2.gif" />
     <Content Include="Content\images\index\info_pic.png" />
     <Content Include="Content\images\index\introBg.gif" />
+    <Content Include="Content\images\index\pic-cn.png" />
     <Content Include="Content\images\index\pic.png" />
     <Content Include="Content\images\index\pic2.png" />
     <Content Include="Content\images\index\productBg.gif" />
@@ -260,6 +270,7 @@
     <Content Include="packages.config" />
     <Content Include="Content\sass\comic.scss" />
     <Content Include="Content\sass\cn.scss" />
+    <Content Include="Content\sass\page.scss" />
     <None Include="Project_Readme.html" />
     <Content Include="Views\Home\Email.cshtml" />
   </ItemGroup>
