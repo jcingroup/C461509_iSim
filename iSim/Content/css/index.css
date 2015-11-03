@@ -1234,8 +1234,6 @@ section header {
           top: -65px; } }
 
 .products header {
-  position: relative;
-  z-index: 12;
   background: url(../images/index/productBg.gif) center 0 no-repeat;
   color: #fff;
   font-size: 1.5em;

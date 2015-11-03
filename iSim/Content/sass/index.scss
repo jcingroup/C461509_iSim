@@ -170,8 +170,6 @@ section {
 }
 .products {
     header {
-        position: relative;
-        z-index: 12;
         background: url(#{$img-path2}/productBg.gif) center 0 no-repeat;
         color: #fff;
         font-size: em(24px);
