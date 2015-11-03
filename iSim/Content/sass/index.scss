@@ -189,11 +189,11 @@ section {
     }
     div { text-align: left; }
     h3 {
-        background: url(#{$img-path2}/icon_title.gif) right 0 no-repeat;
+        background: url(#{$img-path2}/icon.png) right 0 no-repeat;
         color: #fff;
         font-size: em(45px);
         font-family: $font-sp;
-        padding: 7px 60px 7px 0;
+        padding: 7px 62px 7px 0;
         @include media(xs) {
             font-size: em(32px);
         }
@@ -236,9 +236,10 @@ section {
 
         padding: 14px 0 14px 52px;
 
-        small { font-size: em(20px, 27px); }
-        &:nth-of-type(2) { background-position: 0 -85px; }
-        &:nth-of-type(3) { background-position: 0 -180px; }
+        small { font-size: em(16px, 27px); }
+        &:nth-of-type(2),
+        &:nth-of-type(3) { background-position: 0 -85px; }
+        &:nth-of-type(4) { background-position: 0 -168px; }
     }
     article {
         color: #5B5C5C;
@@ -299,7 +300,7 @@ section {
         li {
             background-image: url(#{$img-path2}/icon2.gif);
             &:nth-of-type(2) { background-position: 0 -86px; }
-            &:nth-of-type(3) { background-position: 0 -185px; }
+            &:nth-of-type(3) { background-position: 0 -86px; }
         }
         h3, h4, ol, .btn {
             margin-left: cp(100px);
@@ -327,8 +328,8 @@ section {
     header {
         color: #fff;
         text-align: left;
-        margin-top: -15px;
-        margin-bottom: 15px;
+        margin: -15px auto 15px auto;
+        max-width: 1230px;
     }
 }
 

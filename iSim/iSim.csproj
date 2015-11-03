@@ -170,6 +170,7 @@
     <Content Include="Content\images\index\getBg2.gif" />
     <Content Include="Content\images\index\get_pic.png" />
     <Content Include="Content\images\index\icon.gif" />
+    <Content Include="Content\images\index\icon.png" />
     <Content Include="Content\images\index\icon2.gif" />
     <Content Include="Content\images\index\icon_intro.png" />
     <Content Include="Content\images\index\icon_title.gif" />
