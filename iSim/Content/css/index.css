@@ -1103,7 +1103,7 @@ body {
     @media all and (min-width: 1400px) {
       #banner .btn {
         margin-top: 6%;
-        margin-left: 24%; } }
+        margin-left: 25%; } }
     @media all and (max-width: 544px) {
       #banner .btn {
         width: auto;
