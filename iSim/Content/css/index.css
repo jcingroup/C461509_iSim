@@ -369,8 +369,8 @@ figure {
         margin-left: 0; } }
     figure.item1 h3 {
       background: url(../images/index/icon.png) right 0 no-repeat;
-      padding-right: 20px;
-      margin-right: 15px;
+      padding-right: 18px;
+      margin-right: 20px;
       margin-top: -20px; }
       @media all and (max-width: 320px) {
         figure.item1 h3 {

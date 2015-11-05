@@ -220,8 +220,6 @@
     <Content Include="Content\sass\helper\mixins\_map-get.scss" />
     <Content Include="Content\sass\helper\mixins\_media.scss" />
     <Content Include="Content\sass\helper\mixins\_position.scss" />
-    <Content Include="Content\sass\helper\mixins\_prefix-animation.scss" />
-    <Content Include="Content\sass\helper\mixins\_prefix-gradient.scss" />
     <Content Include="Content\sass\helper\mixins\_prefix.scss" />
     <Content Include="Content\sass\helper\mixins\_shape.scss" />
     <Content Include="Content\sass\helper\mixins\_state.scss" />
